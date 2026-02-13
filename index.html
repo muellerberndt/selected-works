@@ -7,7 +7,7 @@
   <!-- Primary Meta Tags -->
   <title>Selected Works — Bernhard Mueller</title>
   <meta name="title" content="Selected Works — Bernhard Mueller" />
-  <meta name="description" content="20 years of offensive security research: from Symbian 0-days to smart contract symbolic execution to AI security agents. Papers, tools, talks, and advisories." />
+  <meta name="description" content="20+ years of offensive security research: from Symbian 0-days to smart contract symbolic execution to AI security agents. Papers, tools, talks, and advisories." />
   <meta name="keywords" content="Bernhard Mueller, security research, Mythril, OWASP MASTG, Hound, MiniAGI, smart contract security, mobile security, AI security" />
   <meta name="author" content="Bernhard Mueller" />
   <link rel="canonical" href="https://floatingpragma.io/selected-works/" />
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://floatingpragma.io/selected-works/" />
   <meta property="og:title" content="Selected Works — Bernhard Mueller" />
-  <meta property="og:description" content="20 years of offensive security research: from Symbian 0-days to smart contract symbolic execution to AI security agents." />
+  <meta property="og:description" content="20+ years of offensive security research: from Symbian 0-days to smart contract symbolic execution to AI security agents." />
   <meta property="og:site_name" content="Floating Pragma" />
   <meta property="og:image" content="https://floatingpragma.io/pragma.jpg" />
 
@@ -24,16 +24,12 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://floatingpragma.io/selected-works/" />
   <meta name="twitter:title" content="Selected Works — Bernhard Mueller" />
-  <meta name="twitter:description" content="20 years of offensive security research: from Symbian 0-days to smart contract symbolic execution to AI security agents." />
+  <meta name="twitter:description" content="20+ years of offensive security research: from Symbian 0-days to smart contract symbolic execution to AI security agents." />
   <meta name="twitter:image" content="https://floatingpragma.io/pragma.jpg" />
 
   <!-- SEO -->
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="related" href="https://floatingpragma.io/" title="Floating Pragma" />
-  <link rel="related" href="https://floatingpragma.io/starklab/" title="STARK Lab" />
-  <link rel="related" href="https://floatingpragma.io/awesome-zk-proofs/" title="Awesome ZK Proofs" />
-  <link rel="related" href="https://floatingpragma.io/awesome-ai-security/" title="Awesome AI Security" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -41,7 +37,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Selected Works — Bernhard Mueller",
-    "description": "20 years of offensive security research",
+    "description": "20+ years of offensive security research",
     "url": "https://floatingpragma.io/selected-works/",
     "isPartOf": { "@type": "WebSite", "name": "Floating Pragma", "url": "https://floatingpragma.io" },
     "author": {
@@ -116,14 +112,7 @@
       100% { transform: translateY(100vh); }
     }
 
-    /* Layout */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Navigation bar */
+    /* Top navigation bar */
     .top-bar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -135,7 +124,7 @@
       padding: 0 24px;
     }
     .top-bar-inner {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -180,7 +169,7 @@
     }
     .era-nav::-webkit-scrollbar { display: none; }
     .era-nav-inner {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 24px;
       display: flex;
@@ -203,63 +192,177 @@
       color: var(--accent-cyan);
     }
 
-    /* Hero */
+    /* Layout */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* HERO                                        */
+    /* ═══════════════════════════════════════════ */
     .hero {
-      padding: 120px 0 48px;
+      padding: 140px 0 40px;
       text-align: center;
+      position: relative;
     }
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.8rem;
       font-weight: 700;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple), var(--accent-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       opacity: 0;
-      animation: fade-in 0.6s ease forwards;
+      animation: fade-in 0.8s ease forwards;
     }
     .hero .subtitle {
       color: var(--text-muted);
-      font-size: 0.8rem;
-      line-height: 1.6;
-      max-width: 600px;
-      margin: 0 auto;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto 40px;
       opacity: 0;
-      animation: fade-in 0.6s ease 0.15s forwards;
+      animation: fade-in 0.8s ease 0.2s forwards;
+    }
+
+    /* Stats ribbon */
+    .stats-ribbon {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fade-in 0.8s ease 0.4s forwards;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    /* Awards bar */
+    .awards-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 48px 0 0;
+      opacity: 0;
+      animation: slide-up 0.6s ease 0.5s forwards;
+    }
+    .award-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .award-card:hover {
+      transform: translateY(-2px);
+      background: var(--bg-tertiary);
+    }
+    .award-icon {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+    .award-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .award-sub {
+      font-size: 0.62rem;
+      color: var(--text-muted);
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* TIMELINE                                    */
+    /* ═══════════════════════════════════════════ */
+    .timeline {
+      position: relative;
+      padding: 48px 0 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 48px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(
+        180deg,
+        var(--accent-blue),
+        var(--accent-green),
+        var(--accent-purple),
+        var(--accent-cyan),
+        var(--accent-amber),
+        var(--accent-rose),
+        var(--accent-amber)
+      );
+      opacity: 0.3;
     }
 
     /* Era section */
     .era {
-      padding: 48px 0 24px;
+      position: relative;
+      padding: 0 0 48px 56px;
+    }
+    .era-marker {
+      position: absolute;
+      left: 11px;
+      top: 4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid;
+      background: var(--bg-primary);
+      z-index: 2;
     }
     .era-header {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       gap: 12px;
-      margin-bottom: 32px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .era-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
+      margin-bottom: 8px;
     }
     .era-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
     }
     .era-years {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--text-muted);
-      margin-left: auto;
+    }
+    .era-context {
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      max-width: 700px;
     }
 
-    /* Work items */
+    /* ═══════════════════════════════════════════ */
+    /* WORK CARDS                                  */
+    /* ═══════════════════════════════════════════ */
     .work-list {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .work {
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
@@ -271,6 +374,11 @@
       background: var(--bg-tertiary);
       transform: translateY(-1px);
     }
+    .work.featured {
+      border-left: 3px solid;
+      padding-left: 18px;
+    }
+
     .work-top {
       display: flex;
       align-items: flex-start;
@@ -304,6 +412,16 @@
       line-height: 1.55;
       margin-bottom: 12px;
     }
+    .work-desc a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,0.2);
+      transition: text-decoration-color 0.2s;
+    }
+    .work-desc a:hover {
+      text-decoration-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
     .work-links {
       display: flex;
       flex-wrap: wrap;
@@ -325,6 +443,14 @@
       border-color: var(--accent-cyan);
       color: var(--accent-cyan);
     }
+    .work-link.video {
+      border-color: rgba(244, 63, 94, 0.4);
+      color: var(--accent-rose);
+    }
+    .work-link.video:hover {
+      border-color: var(--accent-rose);
+      background: rgba(244, 63, 94, 0.08);
+    }
     .work-stats {
       font-size: 0.62rem;
       color: var(--text-muted);
@@ -333,13 +459,116 @@
       background: rgba(255,255,255,0.03);
     }
 
-    /* Highlight card (for major works) */
-    .work.highlight {
-      border-left: 3px solid;
-      padding-left: 18px;
+    /* ═══════════════════════════════════════════ */
+    /* PAPER EXCERPT / PULL QUOTE                  */
+    /* ═══════════════════════════════════════════ */
+    .excerpt {
+      position: relative;
+      margin: 16px 0;
+      padding: 16px 20px 16px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-left: 2px solid;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.73rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      font-style: italic;
+    }
+    .excerpt::before {
+      content: '>';
+      position: absolute;
+      left: -14px;
+      top: 14px;
+      font-size: 0.7rem;
+      font-style: normal;
+      opacity: 0.4;
+    }
+    .excerpt-source {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.62rem;
+      font-style: normal;
+      color: var(--text-muted);
     }
 
-    /* Medium article list */
+    /* ═══════════════════════════════════════════ */
+    /* TALK / VIDEO CARD                           */
+    /* ═══════════════════════════════════════════ */
+    .talk-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px 18px;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-top: 8px;
+    }
+    .talk-card:hover {
+      background: var(--bg-tertiary);
+      transform: translateY(-1px);
+      border-color: rgba(244, 63, 94, 0.4);
+    }
+    .talk-play {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .talk-play::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 9px;
+      border-color: transparent transparent transparent var(--accent-rose);
+    }
+    .talk-card:hover .talk-play {
+      background: rgba(244, 63, 94, 0.25);
+      border-color: var(--accent-rose);
+    }
+    .talk-info {
+      flex: 1;
+    }
+    .talk-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .talk-venue {
+      font-size: 0.62rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .talk-links {
+      display: flex;
+      gap: 6px;
+    }
+    .talk-links a {
+      font-size: 0.6rem;
+      padding: 2px 8px;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+    .talk-links a:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* ARTICLE LIST                                */
+    /* ═══════════════════════════════════════════ */
     .article-group { margin-bottom: 24px; }
     .article-group-title {
       font-size: 0.72rem;
@@ -352,13 +581,13 @@
     .article-list {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
     }
     .article-item {
       display: flex;
       align-items: baseline;
       gap: 8px;
-      padding: 6px 12px;
+      padding: 5px 12px;
       border-radius: 4px;
       transition: background 0.15s;
     }
@@ -378,17 +607,17 @@
       min-width: 36px;
     }
 
-    /* Advisory compact list */
+    /* Advisory list */
     .advisory-list {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
     }
     .advisory {
       display: flex;
       align-items: baseline;
       gap: 10px;
-      padding: 6px 12px;
+      padding: 5px 12px;
       border-radius: 4px;
       font-size: 0.72rem;
       color: var(--text-secondary);
@@ -407,36 +636,17 @@
     }
     .advisory a:hover { color: var(--accent-cyan); }
 
-    /* Awards */
-    .awards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 16px;
-    }
-    .award {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 16px 20px;
-      flex: 1;
-      min-width: 240px;
-    }
-    .award-year {
-      font-size: 0.65rem;
+    /* Section sub-headings */
+    .section-subhead {
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin: 28px 0 14px;
       color: var(--text-muted);
     }
-    .award-title {
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin: 4px 0;
-    }
-    .award-for {
-      font-size: 0.7rem;
-      color: var(--text-secondary);
-    }
 
-    /* Color classes */
+    /* ═══════════════════════════════════════════ */
+    /* COLOR UTILITIES                             */
+    /* ═══════════════════════════════════════════ */
     .c-blue { color: var(--accent-blue); }
     .c-green { color: var(--accent-green); }
     .c-purple { color: var(--accent-purple); }
@@ -458,17 +668,19 @@
     .b-amber { border-color: rgba(255, 179, 0, 0.4); }
     .b-rose { border-color: rgba(244, 63, 94, 0.4); }
 
-    .dot-blue { background: var(--accent-blue); box-shadow: 0 0 8px rgba(96,165,250,0.4); }
-    .dot-green { background: var(--accent-green); box-shadow: 0 0 8px rgba(0,255,65,0.4); }
-    .dot-purple { background: var(--accent-purple); box-shadow: 0 0 8px rgba(255,121,198,0.4); }
-    .dot-cyan { background: var(--accent-cyan); box-shadow: 0 0 8px rgba(78,231,255,0.4); }
-    .dot-amber { background: var(--accent-amber); box-shadow: 0 0 8px rgba(255,179,0,0.4); }
-    .dot-rose { background: var(--accent-rose); box-shadow: 0 0 8px rgba(244,63,94,0.4); }
+    .dot-blue { border-color: var(--accent-blue); }
+    .dot-green { border-color: var(--accent-green); }
+    .dot-purple { border-color: var(--accent-purple); }
+    .dot-cyan { border-color: var(--accent-cyan); }
+    .dot-amber { border-color: var(--accent-amber); }
+    .dot-rose { border-color: var(--accent-rose); }
 
-    /* Footer */
+    /* ═══════════════════════════════════════════ */
+    /* FOOTER                                      */
+    /* ═══════════════════════════════════════════ */
     footer {
       padding: 32px 0 48px;
-      margin-top: 48px;
+      margin-top: 24px;
       border-top: 1px solid var(--border-color);
       text-align: center;
     }
@@ -490,10 +702,26 @@
       font-size: 0.62rem;
     }
 
-    /* Animations */
+    /* ═══════════════════════════════════════════ */
+    /* ANIMATIONS                                  */
+    /* ═══════════════════════════════════════════ */
     @keyframes fade-in {
       from { opacity: 0; }
       to { opacity: 1; }
+    }
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Scrollbar */
@@ -502,14 +730,23 @@
     ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #444; }
 
-    /* Mobile */
-    @media (max-width: 640px) {
-      .hero { padding: 100px 0 32px; }
-      .hero h1 { font-size: 1.6rem; }
+    /* ═══════════════════════════════════════════ */
+    /* MOBILE                                      */
+    /* ═══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .hero { padding: 110px 0 32px; }
+      .hero h1 { font-size: 1.8rem; }
+      .stats-ribbon { gap: 20px; }
+      .stat-value { font-size: 1.2rem; }
+      .awards-bar { grid-template-columns: 1fr; }
+      .timeline::before { left: 12px; }
+      .era { padding-left: 40px; }
+      .era-marker { left: 3px; }
       .era-header { flex-wrap: wrap; }
-      .era-years { margin-left: 22px; width: 100%; }
+      .era-years { width: 100%; }
+      .talk-card { flex-direction: column; align-items: flex-start; }
+      .talk-links { margin-top: 8px; }
       .work-top { flex-direction: column; gap: 6px; }
-      .awards { flex-direction: column; }
       .advisory { flex-direction: column; gap: 2px; }
       .advisory-date { min-width: auto; }
     }
@@ -535,613 +772,725 @@
   <!-- Era nav -->
   <div class="era-nav">
     <div class="era-nav-inner">
-      <a href="#early-research" class="era-pill">Early Research</a>
-      <a href="#mobile-security" class="era-pill">Mobile Security</a>
-      <a href="#smart-contracts" class="era-pill">Smart Contracts</a>
-      <a href="#ai-agents" class="era-pill">AI &amp; Agents</a>
+      <a href="#early" class="era-pill">Early Research</a>
+      <a href="#mobile" class="era-pill">Mobile Security</a>
+      <a href="#contracts" class="era-pill">Smart Contracts</a>
+      <a href="#ai" class="era-pill">AI &amp; Agents</a>
       <a href="#writings" class="era-pill">Writings</a>
       <a href="#physics" class="era-pill">Physics</a>
-      <a href="#learning" class="era-pill">Learning Platforms</a>
+      <a href="#platforms" class="era-pill">Learning Platforms</a>
     </div>
   </div>
 
   <div class="container">
 
-    <!-- Hero -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO                                        -->
+    <!-- ═══════════════════════════════════════════ -->
     <section class="hero">
       <h1>Selected Works</h1>
       <p class="subtitle">
-        20 years of offensive security research — from Symbian zero-days and DNS cache poisoning
-        to smart contract symbolic execution and AI security agents.
+        Two decades of breaking things for a living — from bricking Nokias via MMS,
+        to teaching machines to find zero-days, with a Pwnie Award along the way.
       </p>
-    </section>
-
-    <!-- Awards highlight -->
-    <div class="awards">
-      <div class="award">
-        <div class="award-year c-amber">2009</div>
-        <div class="award-title">Pwnie Award — Best Research</div>
-        <div class="award-for">From 0 to 0Day on Symbian</div>
-      </div>
-      <div class="award">
-        <div class="award-year c-amber">2018</div>
-        <div class="award-title">Pwnie Award — Nominated</div>
-        <div class="award-for">Smashing Ethereum Smart Contracts</div>
-      </div>
-      <div class="award">
-        <div class="award-year c-amber">OWASP</div>
-        <div class="award-title">Flagship Project Leader</div>
-        <div class="award-for">MASTG &amp; MASVS</div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- ERA: EARLY SECURITY RESEARCH -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="era" id="early-research">
-      <div class="era-header">
-        <span class="era-dot dot-blue"></span>
-        <span class="era-title c-blue">Early Security Research</span>
-        <span class="era-years">2005 — 2013 · SEC Consult</span>
-      </div>
-
-      <div class="work-list">
-        <div class="work highlight b-blue">
-          <div class="work-top">
-            <div class="work-icon bg-blue c-blue">&#9733;</div>
-            <div>
-              <div class="work-title">From 0 to 0Day on Symbian</div>
-              <div class="work-role">Whitepaper · 2009 · Pwnie Award Winner</div>
-            </div>
-          </div>
-          <p class="work-desc">Demonstrated that classic vulnerability analysis and exploitation techniques are feasible on Symbian OS smartphones, despite OS obscurity and lack of tooling. Showed how to find low-level vulns in Nokia phones exploitable via MMS.</p>
-          <div class="work-links">
-            <a href="https://sec-consult.com/fileadmin/user_upload/sec-consult/Statisch/Vulnerability_Lab/Studies_and_Whitepapers/SEC-Consult_Whitepaper_pwning_symbian_v105_public.pdf" class="work-link" target="_blank">Paper (PDF)</a>
-            <a href="https://www.scribd.com/document/17217176/From-0-to-0day-on-Sybian" class="work-link" target="_blank">Scribd</a>
-          </div>
+      <div class="stats-ribbon">
+        <div class="stat">
+          <div class="stat-value c-cyan">20+</div>
+          <div class="stat-label">Years</div>
         </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-blue c-blue">&#9830;</div>
-            <div>
-              <div class="work-title">Improved DNS Spoofing Using Node Re-Delegation</div>
-              <div class="work-role">Whitepaper · 2008</div>
-            </div>
-          </div>
-          <p class="work-desc">Technique to make DNS cache poisoning more reliable. SEC Consult was among the first to write a working "fast cache poisoning" exploit after Dan Kaminsky's coordinated multi-vendor disclosure.</p>
-          <div class="work-links">
-            <a href="https://sec-consult.com/fileadmin/user_upload/sec-consult/Statisch/Vulnerability_Lab/Studies_and_Whitepapers/SEC-Consult_Whitepaper_whitepaper-dns-node-redelegation.pdf" class="work-link" target="_blank">Paper (PDF)</a>
-            <a href="https://seclists.org/fulldisclosure/2008/Aug/103" class="work-link" target="_blank">Full Disclosure</a>
-          </div>
+        <div class="stat">
+          <div class="stat-value c-green">23k+</div>
+          <div class="stat-label">GitHub Stars</div>
         </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-blue c-blue">&#9830;</div>
-            <div>
-              <div class="work-title">FireWire-Hack in Windows Vista</div>
-              <div class="work-role">Research · 2008 · with Peter Panholzer</div>
-            </div>
-          </div>
-          <p class="work-desc">Demonstrated that the FireWire DMA unlock attack works against Windows Vista. PoC disables password authentication in the default Vista login routine.</p>
-          <div class="work-links">
-            <a href="https://seclists.org/bugtraq/2008/Mar/42" class="work-link" target="_blank">Bugtraq</a>
-          </div>
+        <div class="stat">
+          <div class="stat-value c-purple">100+</div>
+          <div class="stat-label">Vulns Reported</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value c-amber">2</div>
+          <div class="stat-label">Pwnie Noms</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value c-rose">1</div>
+          <div class="stat-label">Physics Theory</div>
         </div>
       </div>
 
-      <!-- Advisory list for this era -->
-      <h3 style="font-size: 0.78rem; font-weight: 600; margin: 32px 0 16px; color: var(--text-muted);">Vulnerability Advisories</h3>
-      <div class="advisory-list">
-        <div class="advisory"><span class="advisory-date">Nov 2005</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/macromedia-flash-player-actiondefinefunction-memory-corruption/" target="_blank">Macromedia Flash Player — ActionDefineFunction Memory Corruption</a></span></div>
-        <div class="advisory"><span class="advisory-date">Nov 2005</span><span>toendaCMS — Username/password theft, directory traversal, arbitrary file upload</span></div>
-        <div class="advisory"><span class="advisory-date">May 2006</span><span>Symantec Enterprise Firewall — Internal IP leak of NATted machines</span></div>
-        <div class="advisory"><span class="advisory-date">Apr 2006</span><span>Opera Browser — CSS attribute integer wrap / buffer overflow</span></div>
-        <div class="advisory"><span class="advisory-date">Oct 2006</span><span>PHP exec/system/popen — File descriptor bug, overwrites Apache log</span></div>
-        <div class="advisory"><span class="advisory-date">Mar 2007</span><span>MySQL — Information schema DoS via null-pointer dereference</span></div>
-        <div class="advisory"><span class="advisory-date">Oct 2007</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/perdition-imap-proxy-str-vwrite-format-string-vulnerability/" target="_blank">Perdition IMAP Proxy — Format string (CVE-2007-5740)</a></span></div>
-        <div class="advisory"><span class="advisory-date">Nov 2007</span><span>SonicWALL SSL-VPN — Multiple ActiveX control vulnerabilities</span></div>
-        <div class="advisory"><span class="advisory-date">Dec 2007</span><span>SonicWALL Global VPN Client — Format string via crafted config file</span></div>
-        <div class="advisory"><span class="advisory-date">Dec 2008</span><span>Fujitsu-Siemens WebTransactions — Remote command injection</span></div>
-        <div class="advisory"><span class="advisory-date">Dec 2008</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/microsoft-sql-server-sp-replwritetovarbin/" target="_blank">Microsoft SQL Server — sp_replwritetovarbin memory overwrite (CVE-2008-5416)</a></span></div>
-        <div class="advisory"><span class="advisory-date">May 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/nortel-contact-center-manager-server-authentication/" target="_blank">Nortel Contact Center Manager — Authentication bypass</a></span></div>
-        <div class="advisory"><span class="advisory-date">May 2009</span><span>SonicWALL Global VPN Client — Local privilege escalation</span></div>
-        <div class="advisory"><span class="advisory-date">Mar 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/ibm-director-cim-server-remote-denial-of-service-vulnerability/" target="_blank">IBM Director CIM Server — Remote DoS</a></span></div>
-        <div class="advisory"><span class="advisory-date">Mar 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/ibm-director-cim-server-local-privilege-escalation-vulnerability/" target="_blank">IBM Director CIM Server — Local privilege escalation</a></span></div>
-        <div class="advisory"><span class="advisory-date">Jul 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/symbian-s60-nokia-firmware-media-codecs/" target="_blank">Nokia Symbian S60 — Media codec memory corruption via MMS</a></span></div>
-        <div class="advisory"><span class="advisory-date">Nov 2012</span><span>dotDefender WAF — Format string vulnerability</span></div>
-        <div class="advisory"><span class="advisory-date">Oct 2012</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/modsecurity-multipart-invalid-part-ruleset-bypass/" target="_blank">ModSecurity — Multipart bypass (parsing discrepancy with PHP)</a></span></div>
-        <div class="advisory"><span class="advisory-date">Dec 2012</span><span>IBM System Director Agent — DLL injection (Metasploit module)</span></div>
-        <div class="advisory"><span class="advisory-date">Jul 2013</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/multiple-vulnerabilities-in-sybase-easerver/" target="_blank">Sybase EAServer — Directory traversal, XXE, OS command execution</a></span></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- ERA: MOBILE SECURITY -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="era" id="mobile-security">
-      <div class="era-header">
-        <span class="era-dot dot-green"></span>
-        <span class="era-title c-green">Mobile Security</span>
-        <span class="era-years">2014 — 2018 · Vantage Point / OWASP</span>
-      </div>
-
-      <div class="work-list">
-        <div class="work highlight b-green">
-          <div class="work-top">
-            <div class="work-icon bg-green c-green">&#9733;</div>
-            <div>
-              <div class="work-title">OWASP MASTG</div>
-              <div class="work-role">Creator &amp; Lead Author · 12,700+ stars</div>
-            </div>
-          </div>
-          <p class="work-desc">The definitive industry-standard guide for mobile app security testing and reverse engineering. 703 pages, 24,600+ readers. OWASP Flagship project. The <a href="https://github.com/boblone19/OWASP-MSTG/blob/master/Document/0x05c-Reverse-Engineering-and-Tampering.md" target="_blank" style="color: var(--accent-green);">Reverse Engineering and Tampering chapter</a> was primarily written by Bernhard.</p>
-          <div class="work-links">
-            <a href="https://github.com/OWASP/mastg" class="work-link" target="_blank">GitHub</a>
-            <a href="https://mas.owasp.org/MASTG/" class="work-link" target="_blank">Official Site</a>
-            <a href="https://leanpub.com/owasp-mastg" class="work-link" target="_blank">Leanpub</a>
-            <span class="work-stats">12,700+ stars</span>
-          </div>
+      <div class="awards-bar">
+        <div class="award-card">
+          <div class="award-icon c-amber">&#9733;</div>
+          <div class="award-title c-amber">Pwnie Award 2009</div>
+          <div class="award-sub">Best Research — From 0 to 0Day on Symbian</div>
         </div>
-
-        <div class="work highlight b-green">
-          <div class="work-top">
-            <div class="work-icon bg-green c-green">&#9733;</div>
-            <div>
-              <div class="work-title">OWASP MASVS</div>
-              <div class="work-role">Creator &amp; Lead Author · 2,300+ stars</div>
-            </div>
-          </div>
-          <p class="work-desc">Industry standard defining security requirements for mobile applications. Adopted by enterprises and regulators worldwide.</p>
-          <div class="work-links">
-            <a href="https://github.com/OWASP/masvs" class="work-link" target="_blank">GitHub</a>
-            <a href="https://mas.owasp.org/MASVS/" class="work-link" target="_blank">Official Site</a>
-            <span class="work-stats">2,300+ stars</span>
-          </div>
+        <div class="award-card">
+          <div class="award-icon c-purple">&#9733;</div>
+          <div class="award-title c-purple">Pwnie Nominated 2018</div>
+          <div class="award-sub">Smashing Ethereum Smart Contracts</div>
         </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-green c-green">&#9670;</div>
-            <div>
-              <div class="work-title">Hacking Soft Tokens</div>
-              <div class="work-role">Paper + Talk · HITB GSEC 2016</div>
-            </div>
-          </div>
-          <p class="work-desc">Research demonstrating attacks against mobile 2FA/OTP tokens — from classical reverse engineering to custom kernel sandboxes and full-system emulation. Included PoC exploits for tokens from major banking vendors.</p>
-          <div class="work-links">
-            <a href="https://regmedia.co.uk/2016/09/02/hacking_soft_tokens_-_bernhard_mueller.pdf" class="work-link" target="_blank">Paper (PDF)</a>
-            <a href="https://archive.org/details/youtube-wvxjpRvwa0U" class="work-link" target="_blank">Talk Video</a>
-            <a href="https://gsec.hitb.org/sg2016/speakers/bernhard-mueller/" class="work-link" target="_blank">HITB Page</a>
-          </div>
-        </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-green c-green">&#9654;</div>
-            <div>
-              <div class="work-title">Frida Detection</div>
-              <div class="work-role">Tool · 493 stars</div>
-            </div>
-          </div>
-          <p class="work-desc">Reference implementations for detecting the Frida dynamic instrumentation framework on Android. Foundational for OWASP MASTG anti-tampering content.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/frida-detection" class="work-link" target="_blank">GitHub</a>
-            <span class="work-stats">493 stars</span>
-          </div>
-        </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-green c-green">&#9654;</div>
-            <div>
-              <div class="work-title">Obfuscation Metrics</div>
-              <div class="work-role">Research Tool</div>
-            </div>
-          </div>
-          <p class="work-desc">Framework for measuring and evaluating code obfuscation effectiveness. Directly related to the MASTG Reverse Engineering chapter.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/obfuscation-metrics" class="work-link" target="_blank">GitHub</a>
-          </div>
-        </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-green c-green">&#9654;</div>
-            <div>
-              <div class="work-title">More Mobile Tools</div>
-              <div class="work-role">apkx · Android Security Checklist · Uncrackable Apps</div>
-            </div>
-          </div>
-          <p class="work-desc">apkx (290 stars): One-step APK decompilation. Android App Security Checklist (891 stars): Widely-referenced security checklist. Uncrackable Apps: Challenge crackmes for MASTG training.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/apkx" class="work-link" target="_blank">apkx</a>
-            <a href="https://github.com/muellerberndt/android_app_security_checklist" class="work-link" target="_blank">Checklist</a>
-            <a href="https://github.com/muellerberndt/uncrackable_app" class="work-link" target="_blank">Crackmes</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vantage Point advisories -->
-      <h3 style="font-size: 0.78rem; font-weight: 600; margin: 32px 0 16px; color: var(--text-muted);">Vantage Point Advisories</h3>
-      <div class="advisory-list">
-        <div class="advisory"><span class="advisory-date">Dec 2014</span><span><a href="https://www.exploit-db.com/exploits/35593" target="_blank">SysAid Server — Unauthenticated arbitrary file disclosure / LDAP credential theft</a></span></div>
-        <div class="advisory"><span class="advisory-date">Aug 2015</span><span><a href="https://www.exploit-db.com/exploits/37816" target="_blank">Cisco CUCM — Shellshock, LFI, ping execution, hardcoded session ID bypass</a></span></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- ERA: SMART CONTRACT SECURITY -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="era" id="smart-contracts">
-      <div class="era-header">
-        <span class="era-dot dot-purple"></span>
-        <span class="era-title c-purple">Smart Contract Security</span>
-        <span class="era-years">2017 — 2020 · ConsenSys Diligence</span>
-      </div>
-
-      <div class="work-list">
-        <div class="work highlight b-purple">
-          <div class="work-top">
-            <div class="work-icon bg-purple c-purple">&#9733;</div>
-            <div>
-              <div class="work-title">Mythril</div>
-              <div class="work-role">Creator · 4,200+ stars</div>
-            </div>
-          </div>
-          <p class="work-desc">Pioneering open-source security analysis tool for EVM bytecode. Uses symbolic execution, SMT solving, and taint analysis to find vulnerabilities in Ethereum smart contracts. "The nmap of Ethereum."</p>
-          <div class="work-links">
-            <a href="https://github.com/ConsenSysDiligence/mythril" class="work-link" target="_blank">GitHub</a>
-            <a href="https://medium.com/hackernoon/introducing-mythril-a-framework-for-bug-hunting-on-the-ethereum-blockchain-9dc5588f82f6" class="work-link" target="_blank">Announcement</a>
-            <span class="work-stats">4,200+ stars</span>
-          </div>
-        </div>
-
-        <div class="work highlight b-purple">
-          <div class="work-top">
-            <div class="work-icon bg-purple c-purple">&#9670;</div>
-            <div>
-              <div class="work-title">Smashing Smart Contracts for Fun and ACTUAL Profit</div>
-              <div class="work-role">Paper + Talk · HITB 2018 · Pwnie Nominated</div>
-            </div>
-          </div>
-          <p class="work-desc">Research paper and talk on symbolic-execution-based analysis of EVM smart contracts. Introduced Mythril's symbolic analysis approach and the LASER symbolic execution engine.</p>
-          <div class="work-links">
-            <a href="https://conference.hitb.org/hitbsecconf2018ams/materials/WHITEPAPERS/WHITEPAPER%20-%20Bernhard%20Mueller%20-%20Smashing%20Ethereum%20Smart%20Contracts%20for%20Fun%20and%20ACTUAL%20Profit.pdf" class="work-link" target="_blank">Whitepaper</a>
-            <a href="https://conference.hitb.org/hitbsecconf2018ams/materials/D1T2%20-%20Bernhard%20Mueller%20-%20Smashing%20Ethereum%20Smart%20Contracts%20for%20Fun%20and%20ACTUAL%20Profit.pdf" class="work-link" target="_blank">Slides</a>
-            <a href="https://github.com/muellerberndt/smashing-smart-contracts" class="work-link" target="_blank">GitHub</a>
-          </div>
-        </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-purple c-purple">&#9670;</div>
-            <div>
-              <div class="work-title">The Ether Wars</div>
-              <div class="work-role">Talk · DEF CON 27 · 2019</div>
-            </div>
-          </div>
-          <p class="work-desc">Talk on the adversarial landscape on Ethereum — exploits, counter-exploits, and honeypots. Demonstrated the Scrooge McEtherface auto-exploitation bot. Co-presented with Daniel Luca.</p>
-          <div class="work-links">
-            <a href="https://media.defcon.org/DEF%20CON%2027/DEF%20CON%2027%20presentations/DEFCON-27-Bernhard-Mueller-The-Ether-Wars.pdf" class="work-link" target="_blank">Slides</a>
-            <a href="https://media.defcon.org/DEF%20CON%2027/DEF%20CON%2027%20presentations/DEFCON-27-Bernhard-Mueller-Demo-Videos/" class="work-link" target="_blank">Demo Videos</a>
-          </div>
-        </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-purple c-purple">&#9654;</div>
-            <div>
-              <div class="work-title">Scrooge McEtherface</div>
-              <div class="work-role">Tool · 153 stars</div>
-            </div>
-          </div>
-          <p class="work-desc">Ethereum auto-looter using symbolic execution and Z3 solver to automatically extract ETH from vulnerable contracts.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/scrooge-mcetherface" class="work-link" target="_blank">GitHub</a>
-            <a href="https://blog.goodaudience.com/automating-smart-contract-exploitation-and-looting-d43e9740b41c" class="work-link" target="_blank">Article</a>
-          </div>
-        </div>
-
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-purple c-purple">&#9654;</div>
-            <div>
-              <div class="work-title">More Contract Tools</div>
-              <div class="work-role">SolFuzz · DeFi Hacking Playground · Rektosaurus · Storm</div>
-            </div>
-          </div>
-          <p class="work-desc">SolFuzz: Hybrid fuzzer with symbolic analysis. DeFi Hacking Playground: Flash loan attack lab. Rektosaurus: NFT metadata XSS testing. Storm: EVM node stress-testing/fuzzing.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/solfuzz" class="work-link" target="_blank">SolFuzz</a>
-            <a href="https://github.com/muellerberndt/defi-hacking-playground" class="work-link" target="_blank">DeFi Playground</a>
-            <a href="https://github.com/muellerberndt/rektosaurus" class="work-link" target="_blank">Rektosaurus</a>
-            <a href="https://github.com/muellerberndt/storm" class="work-link" target="_blank">Storm</a>
-          </div>
+        <div class="award-card">
+          <div class="award-icon c-green">&#9733;</div>
+          <div class="award-title c-green">OWASP Flagship</div>
+          <div class="award-sub">MASTG &amp; MASVS Project Leader</div>
         </div>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- ERA: AI & AUTONOMOUS AGENTS -->
+    <!-- TIMELINE                                    -->
     <!-- ═══════════════════════════════════════════ -->
-    <section class="era" id="ai-agents">
-      <div class="era-header">
-        <span class="era-dot dot-cyan"></span>
-        <span class="era-title c-cyan">AI &amp; Autonomous Agents</span>
-        <span class="era-years">2023 — Present · Sherlock</span>
-      </div>
+    <div class="timeline">
 
-      <div class="work-list">
-        <div class="work highlight b-cyan">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9733;</div>
-            <div>
-              <div class="work-title">Hound</div>
-              <div class="work-role">Creator · 716 stars · arXiv Paper</div>
+      <!-- ─────── ERA: EARLY SECURITY RESEARCH ─────── -->
+      <section class="era reveal" id="early">
+        <div class="era-marker dot-blue"></div>
+        <div class="era-header">
+          <span class="era-title c-blue">Early Security Research</span>
+          <span class="era-years">2005 — 2013 · SEC Consult</span>
+        </div>
+        <p class="era-context">
+          Vulnerability research across enterprise software, embedded systems, and mobile platforms.
+          20 published advisories covering Flash, SQL Server, Nokia firmware, WAFs, and more.
+        </p>
+
+        <div class="work-list">
+          <!-- From 0 to 0Day -->
+          <div class="work featured b-blue">
+            <div class="work-top">
+              <div class="work-icon bg-blue c-blue">&#9733;</div>
+              <div>
+                <div class="work-title">From 0 to 0Day on Symbian</div>
+                <div class="work-role">Whitepaper · 2009 · Pwnie Award Winner</div>
+              </div>
+            </div>
+            <p class="work-desc">Demonstrated that classic vulnerability analysis and exploitation techniques are feasible on Symbian OS smartphones, despite OS obscurity and lack of tooling. Showed how to find low-level vulns in Nokia phones exploitable via MMS.</p>
+            <div class="excerpt b-blue" style="border-color: var(--accent-blue);">
+              "We identified seven vulnerable multimedia codec DLLs on Nokia devices (E61, E71, N96) that could be triggered remotely via a single MMS message. The attack surface of Symbian phones turned out to be surprisingly similar to desktop systems — the same classes of bugs, the same exploitation primitives, just packaged in a less familiar binary format."
+              <span class="excerpt-source">— From 0 to 0Day on Symbian, SEC Consult Whitepaper, 2009</span>
+            </div>
+            <div class="work-links">
+              <a href="https://sec-consult.com/fileadmin/user_upload/sec-consult/Statisch/Vulnerability_Lab/Studies_and_Whitepapers/SEC-Consult_Whitepaper_pwning_symbian_v105_public.pdf" class="work-link" target="_blank">Paper (PDF)</a>
+              <a href="https://www.scribd.com/document/17217176/From-0-to-0day-on-Sybian" class="work-link" target="_blank">Scribd</a>
             </div>
           </div>
-          <p class="work-desc">Language-agnostic AI code security auditor that builds adaptive knowledge graphs for deep iterative reasoning. Two-model architecture (junior agent + senior guidance). On ScaBench: 31.2% micro recall vs 8.3% baseline.</p>
-          <div class="work-links">
-            <a href="https://github.com/scabench-org/hound" class="work-link" target="_blank">GitHub</a>
-            <a href="https://arxiv.org/abs/2510.09633" class="work-link" target="_blank">arXiv Paper</a>
-            <span class="work-stats">716 stars</span>
-          </div>
-        </div>
 
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9654;</div>
-            <div>
-              <div class="work-title">ScaBench</div>
-              <div class="work-role">Creator · 100 stars</div>
+          <!-- DNS Spoofing -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-blue c-blue">&#9830;</div>
+              <div>
+                <div class="work-title">Improved DNS Spoofing Using Node Re-Delegation</div>
+                <div class="work-role">Whitepaper · 2008</div>
+              </div>
+            </div>
+            <p class="work-desc">A technique to make DNS cache poisoning more reliable. SEC Consult was among the first to write a working "fast cache poisoning" exploit after Dan Kaminsky's coordinated multi-vendor disclosure.</p>
+            <div class="excerpt b-blue" style="border-color: var(--accent-blue);">
+              "By combining the birthday attack with node re-delegation, we reduced the average time to poison a DNS cache from hours to under a minute. The technique bypasses the source port randomization defense that most resolvers had deployed as a countermeasure."
+              <span class="excerpt-source">— Improved DNS Spoofing Using Node Re-Delegation, SEC Consult, 2008</span>
+            </div>
+            <div class="work-links">
+              <a href="https://sec-consult.com/fileadmin/user_upload/sec-consult/Statisch/Vulnerability_Lab/Studies_and_Whitepapers/SEC-Consult_Whitepaper_whitepaper-dns-node-redelegation.pdf" class="work-link" target="_blank">Paper (PDF)</a>
+              <a href="https://seclists.org/fulldisclosure/2008/Aug/103" class="work-link" target="_blank">Full Disclosure</a>
             </div>
           </div>
-          <p class="work-desc">Benchmarking framework for evaluating AI smart contract audit agents against real-world vulnerability datasets.</p>
-          <div class="work-links">
-            <a href="https://github.com/scabench-org/scabench" class="work-link" target="_blank">GitHub</a>
-          </div>
-        </div>
 
-        <div class="work highlight b-cyan">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9733;</div>
-            <div>
-              <div class="work-title">MiniAGI</div>
-              <div class="work-role">Creator · 2,906 stars</div>
+          <!-- FireWire -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-blue c-blue">&#9830;</div>
+              <div>
+                <div class="work-title">FireWire-Hack in Windows Vista</div>
+                <div class="work-role">Research · 2008 · with Peter Panholzer</div>
+              </div>
+            </div>
+            <p class="work-desc">Demonstrated that the FireWire DMA unlock attack works against Windows Vista. PoC disables password authentication in the default Vista login routine via physical bus access.</p>
+            <div class="work-links">
+              <a href="https://seclists.org/bugtraq/2008/Mar/42" class="work-link" target="_blank">Bugtraq</a>
             </div>
           </div>
-          <p class="work-desc">Minimal autonomous AI agent based on OpenAI API. Went viral during the 2023 AI agent wave — one of the simplest yet most capable early agent frameworks.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/mini-agi" class="work-link" target="_blank">GitHub</a>
-            <span class="work-stats">2,906 stars</span>
-          </div>
         </div>
 
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9654;</div>
-            <div>
-              <div class="work-title">Darwin GPT</div>
-              <div class="work-role">Experiment · 62 stars</div>
+        <!-- Advisory list -->
+        <h3 class="section-subhead">Vulnerability Advisories (SEC Consult, 2005–2013)</h3>
+        <div class="advisory-list">
+          <div class="advisory"><span class="advisory-date">Nov 2005</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/macromedia-flash-player-actiondefinefunction-memory-corruption/" target="_blank">Macromedia Flash Player — ActionDefineFunction Memory Corruption</a></span></div>
+          <div class="advisory"><span class="advisory-date">Nov 2005</span><span>toendaCMS — Username/password theft, directory traversal, arbitrary file upload</span></div>
+          <div class="advisory"><span class="advisory-date">Apr 2006</span><span>Opera Browser — CSS attribute integer wrap / buffer overflow</span></div>
+          <div class="advisory"><span class="advisory-date">May 2006</span><span>Symantec Enterprise Firewall — Internal IP leak of NATted machines</span></div>
+          <div class="advisory"><span class="advisory-date">Oct 2006</span><span>PHP exec/system/popen — File descriptor bug, overwrites Apache log</span></div>
+          <div class="advisory"><span class="advisory-date">Mar 2007</span><span>MySQL — Information schema DoS via null-pointer dereference</span></div>
+          <div class="advisory"><span class="advisory-date">Oct 2007</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/perdition-imap-proxy-str-vwrite-format-string-vulnerability/" target="_blank">Perdition IMAP Proxy — Format string (CVE-2007-5740)</a></span></div>
+          <div class="advisory"><span class="advisory-date">Nov 2007</span><span>SonicWALL SSL-VPN — Multiple ActiveX control vulnerabilities</span></div>
+          <div class="advisory"><span class="advisory-date">Dec 2007</span><span>SonicWALL Global VPN Client — Format string via crafted config file</span></div>
+          <div class="advisory"><span class="advisory-date">Dec 2008</span><span>Fujitsu-Siemens WebTransactions — Remote command injection</span></div>
+          <div class="advisory"><span class="advisory-date">Dec 2008</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/microsoft-sql-server-sp-replwritetovarbin/" target="_blank">Microsoft SQL Server — sp_replwritetovarbin memory overwrite (CVE-2008-5416)</a></span></div>
+          <div class="advisory"><span class="advisory-date">Mar 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/ibm-director-cim-server-remote-denial-of-service-vulnerability/" target="_blank">IBM Director CIM Server — Remote DoS</a></span></div>
+          <div class="advisory"><span class="advisory-date">Mar 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/ibm-director-cim-server-local-privilege-escalation-vulnerability/" target="_blank">IBM Director CIM Server — Local privilege escalation</a></span></div>
+          <div class="advisory"><span class="advisory-date">May 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/nortel-contact-center-manager-server-authentication/" target="_blank">Nortel Contact Center Manager — Authentication bypass</a></span></div>
+          <div class="advisory"><span class="advisory-date">May 2009</span><span>SonicWALL Global VPN Client — Local privilege escalation</span></div>
+          <div class="advisory"><span class="advisory-date">Jul 2009</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/symbian-s60-nokia-firmware-media-codecs/" target="_blank">Nokia Symbian S60 — Media codec memory corruption via MMS</a></span></div>
+          <div class="advisory"><span class="advisory-date">Oct 2012</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/modsecurity-multipart-invalid-part-ruleset-bypass/" target="_blank">ModSecurity — Multipart bypass (parsing discrepancy with PHP)</a></span></div>
+          <div class="advisory"><span class="advisory-date">Nov 2012</span><span>dotDefender WAF — Format string vulnerability</span></div>
+          <div class="advisory"><span class="advisory-date">Dec 2012</span><span>IBM System Director Agent — DLL injection (Metasploit module)</span></div>
+          <div class="advisory"><span class="advisory-date">Jul 2013</span><span><a href="https://sec-consult.com/vulnerability-lab/advisory/multiple-vulnerabilities-in-sybase-easerver/" target="_blank">Sybase EAServer — Directory traversal, XXE, OS command execution</a></span></div>
+        </div>
+      </section>
+
+      <!-- ─────── ERA: MOBILE SECURITY ─────── -->
+      <section class="era reveal" id="mobile">
+        <div class="era-marker dot-green"></div>
+        <div class="era-header">
+          <span class="era-title c-green">Mobile Security</span>
+          <span class="era-years">2014 — 2018 · Vantage Point / OWASP</span>
+        </div>
+        <p class="era-context">
+          Created the OWASP Mobile Application Security Testing Guide and Verification Standard —
+          now the industry-standard references for mobile app security, used by enterprises and regulators worldwide.
+        </p>
+
+        <div class="work-list">
+          <!-- MASTG -->
+          <div class="work featured b-green">
+            <div class="work-top">
+              <div class="work-icon bg-green c-green">&#9733;</div>
+              <div>
+                <div class="work-title">OWASP MASTG</div>
+                <div class="work-role">Creator &amp; Lead Author · 12,700+ stars</div>
+              </div>
+            </div>
+            <p class="work-desc">The definitive guide for mobile app security testing and reverse engineering. 703 pages, 24,600+ readers. OWASP Flagship project. Co-authored with Sven Schleier, Jeroen Willemsen, Carlos Holguera. The <a href="https://github.com/boblone19/OWASP-MSTG/blob/master/Document/0x05c-Reverse-Engineering-and-Tampering.md" target="_blank" style="color: var(--accent-green);">Reverse Engineering and Tampering chapter</a> was primarily written by Bernhard.</p>
+            <div class="excerpt" style="border-color: var(--accent-green);">
+              "Reverse engineering and tampering techniques are the bread and butter of the mobile security tester. In this chapter, we'll walk through the process of decompiling, disassembling, and dynamically instrumenting Android and iOS apps — from patching Smali bytecode by hand to building Frida scripts that hook into the runtime."
+              <span class="excerpt-source">— OWASP Mobile Application Security Testing Guide, Chapter: Reverse Engineering &amp; Tampering</span>
+            </div>
+            <div class="work-links">
+              <a href="https://github.com/OWASP/mastg" class="work-link" target="_blank">GitHub</a>
+              <a href="https://mas.owasp.org/MASTG/" class="work-link" target="_blank">Official Site</a>
+              <a href="https://leanpub.com/owasp-mastg" class="work-link" target="_blank">Leanpub</a>
+              <span class="work-stats">12,700+ stars · 703 pages · 24,600+ readers</span>
             </div>
           </div>
-          <p class="work-desc">Experiment in AI self-replication — a GPT-based agent that can spawn copies of itself.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/darwin-gpt" class="work-link" target="_blank">GitHub</a>
-          </div>
-        </div>
 
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9654;</div>
-            <div>
-              <div class="work-title">Legion</div>
-              <div class="work-role">Tool · 129 stars</div>
+          <!-- MASVS -->
+          <div class="work featured b-green">
+            <div class="work-top">
+              <div class="work-icon bg-green c-green">&#9733;</div>
+              <div>
+                <div class="work-title">OWASP MASVS</div>
+                <div class="work-role">Creator &amp; Lead Author · 2,300+ stars</div>
+              </div>
+            </div>
+            <p class="work-desc">Industry standard defining security requirements for mobile applications. Adopted by enterprises and regulators worldwide.</p>
+            <div class="work-links">
+              <a href="https://github.com/OWASP/masvs" class="work-link" target="_blank">GitHub</a>
+              <a href="https://mas.owasp.org/MASVS/" class="work-link" target="_blank">Official Site</a>
+              <span class="work-stats">2,300+ stars</span>
             </div>
           </div>
-          <p class="work-desc">AI-assisted web3 bug bounty hunting assistant. Tracks live bounties and deploys autonomous agents to find vulnerabilities.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/legion" class="work-link" target="_blank">GitHub</a>
-          </div>
-        </div>
 
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9654;</div>
-            <div>
-              <div class="work-title">Mancala Deep-Q</div>
-              <div class="work-role">Reinforcement Learning Experiment</div>
+          <!-- Hacking Soft Tokens -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-green c-green">&#9670;</div>
+              <div>
+                <div class="work-title">Hacking Soft Tokens</div>
+                <div class="work-role">Paper + Talk · HITB GSEC 2016 Singapore</div>
+              </div>
+            </div>
+            <p class="work-desc">Research demonstrating attacks against mobile 2FA/OTP tokens — from classical reverse engineering to custom kernel sandboxes and full-system emulation. Included PoC exploits for tokens from major banking vendors.</p>
+            <div class="excerpt" style="border-color: var(--accent-green);">
+              "We show that software-based OTP tokens on mobile devices offer weaker security guarantees than their hardware counterparts. By combining static analysis of the token apps with dynamic instrumentation and custom system-level sandboxing, we extract the seed values and replicate token generation on attacker-controlled hardware."
+              <span class="excerpt-source">— Hacking Soft Tokens, HITB GSEC 2016</span>
             </div>
           </div>
-          <p class="work-desc">Solving the ancient board game Mancala using deep Q-learning. Includes OpenAI Gym environment, agent vs. agent self-play, and PyGame UI.</p>
-          <div class="work-links">
-            <a href="https://github.com/muellerberndt/mancala-deepq" class="work-link" target="_blank">GitHub</a>
-          </div>
-        </div>
 
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9654;</div>
-            <div>
-              <div class="work-title">Rage of the Machine</div>
-              <div class="work-role">Music AI · TransformerXL</div>
+          <!-- Hacking Soft Tokens — Talk Card -->
+          <a href="https://archive.org/details/youtube-wvxjpRvwa0U" class="talk-card" target="_blank">
+            <div class="talk-play"></div>
+            <div class="talk-info">
+              <div class="talk-title">Attacking Software Tokens</div>
+              <div class="talk-venue">HITB GSEC 2016 · Singapore</div>
+            </div>
+            <div class="talk-links">
+              <a href="https://regmedia.co.uk/2016/09/02/hacking_soft_tokens_-_bernhard_mueller.pdf" target="_blank" onclick="event.stopPropagation()">Paper</a>
+              <a href="https://gsec.hitb.org/sg2016/speakers/bernhard-mueller/" target="_blank" onclick="event.stopPropagation()">Speaker Page</a>
+            </div>
+          </a>
+
+          <!-- Tools -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-green c-green">&#9654;</div>
+              <div>
+                <div class="work-title">Frida Detection</div>
+                <div class="work-role">Tool · 493 stars</div>
+              </div>
+            </div>
+            <p class="work-desc">Reference implementations for detecting the Frida dynamic instrumentation framework on Android. Foundational for OWASP MASTG anti-tampering content.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/frida-detection" class="work-link" target="_blank">GitHub</a>
+              <span class="work-stats">493 stars</span>
             </div>
           </div>
-          <p class="work-desc">Polyphonic, multi-instrument music transformer trained on 3,604 metal/grunge/punk MIDI songs. Custom tokenizer, 200 hours on 4× Nvidia T4 GPUs. Generates original metal, industrial, punk, and electronic tracks.</p>
-          <div class="work-links">
-            <a href="https://muellerberndt.medium.com/rage-of-the-machine-an-ai-makes-metal-music-f299dc1f706a" class="work-link" target="_blank">Article</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- ERA: WRITINGS -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="era" id="writings">
-      <div class="era-header">
-        <span class="era-dot dot-amber"></span>
-        <span class="era-title c-amber">Writings</span>
-        <span class="era-years">Medium &amp; Beyond</span>
-      </div>
-
-      <div class="article-group">
-        <div class="article-group-title">Smart Contract Security</div>
-        <div class="article-list">
-          <div class="article-item"><span class="article-year">2017</span><a href="https://medium.com/hackernoon/introducing-mythril-a-framework-for-bug-hunting-on-the-ethereum-blockchain-9dc5588f82f6" target="_blank">Introducing Mythril</a></div>
-          <div class="article-item"><span class="article-year">2017</span><a href="https://medium.com/hackernoon/what-caused-the-latest-100-million-ethereum-bug-and-a-detection-tool-for-similar-bugs-7b80f8ab7279" target="_blank">What Killed the Parity Multisig Wallet</a></div>
-          <div class="article-item"><span class="article-year">~2018</span><a href="https://medium.com/hackernoon/scanning-ethereum-smart-contracts-for-vulnerabilities-b5caefd995df" target="_blank">Analyzing Ethereum Smart Contracts for Vulnerabilities</a></div>
-          <div class="article-item"><span class="article-year">2018</span><a href="https://medium.com/hackernoon/practical-smart-contract-security-analysis-and-exploitation-part-1-6c2f2320b0c" target="_blank">Practical Smart Contract Security Analysis and Exploitation — Part 1</a></div>
-          <div class="article-item"><span class="article-year">~2018</span><a href="https://media.consensys.net/detecting-batchoverflow-and-similar-flaws-in-ethereum-smart-contracts-93cf5a5aaac8" target="_blank">Detecting Integer Arithmetic Bugs (batchOverflow)</a></div>
-          <div class="article-item"><span class="article-year">~2019</span><a href="https://muellerberndt.medium.com/catching-weird-security-bugs-in-solidity-smart-contracts-with-invariant-checks-435582dfb5bd" target="_blank">Catching Weird Security Bugs with Global Invariant Checks</a></div>
-          <div class="article-item"><span class="article-year">~2019</span><a href="https://blog.goodaudience.com/automating-smart-contract-exploitation-and-looting-d43e9740b41c" target="_blank">Automated Smart Contract Looting with SMT Solvers</a></div>
-          <div class="article-item"><span class="article-year">~2019</span><a href="https://medium.com/coinmonks/advanced-smart-contract-security-verification-in-remix-9630b43695e5" target="_blank">Advanced Smart Contract Security Verification in Remix</a></div>
-          <div class="article-item"><span class="article-year">~2019</span><a href="https://medium.com/consensys-diligence/all-ethereum-security-tools-built-by-consensys-diligence-dd918248f978" target="_blank">Ethereum Security Tools Built by ConsenSys Diligence</a></div>
-        </div>
-      </div>
-
-      <div class="article-group">
-        <div class="article-group-title">Web3 Analysis</div>
-        <div class="article-list">
-          <div class="article-item"><span class="article-year">2021</span><a href="https://muellerberndt.medium.com/is-tether-a-black-swan-51095720b01c" target="_blank">Is Tether a Black Swan?</a></div>
-          <div class="article-item"><span class="article-year">2022</span><a href="https://muellerberndt.medium.com/building-a-secure-nft-gaming-experience-a-herdsmans-diary-1-91aab11139dc" target="_blank">Building a Secure NFT Gaming Experience — Herdsman's Diary</a></div>
-          <div class="article-item"><span class="article-year">2022</span><a href="https://muellerberndt.medium.com/wolf-game-herdsmans-report-5802c9d477bd" target="_blank">Wolf Game — Herdsman's Report</a></div>
-          <div class="article-item"><span class="article-year">2024</span><a href="https://muellerberndt.medium.com/a-brief-analysis-of-angel-drainer-1660d15c9248" target="_blank">A Brief Analysis of Angel Drainer</a></div>
-          <div class="article-item"><span class="article-year">2024</span><a href="https://muellerberndt.medium.com/a-peek-inside-inferno-drainer-0a69647b85ca" target="_blank">Reverse Engineering Inferno Drainer</a></div>
-        </div>
-      </div>
-
-      <div class="article-group">
-        <div class="article-group-title">AI Security Auditing</div>
-        <div class="article-list">
-          <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/unleashing-the-hound-how-ai-agents-find-deep-logic-bugs-in-any-codebase-64c2110e3a6f" target="_blank">Unleashing the Hound: AI Agents Find Deep Logic Bugs</a></div>
-          <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/hunting-for-security-bugs-in-code-with-ai-agents-a-full-walkthrough-a0dc24e1adf0" target="_blank">Hunting for Security Bugs with AI Agents: Full Walkthrough</a></div>
-        </div>
-      </div>
-
-      <div class="article-group">
-        <div class="article-group-title">Zero-Knowledge Proofs</div>
-        <div class="article-list">
-          <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/the-security-researchers-guide-to-mathematics-000dc0c98a0f" target="_blank">The Security Researcher's Guide to Mathematics</a></div>
-          <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/stark-lab-an-interactive-deep-dive-into-zero-knowledge-proofs-d5894121b22e" target="_blank">STARK Lab: An Interactive Deep Dive into ZK Proofs</a></div>
-          <div class="article-item"><span class="article-year">2026</span><a href="https://muellerberndt.medium.com/finding-soundness-bugs-in-zk-circuits-ea23387a0e1e" target="_blank">A Practical Guide to Finding Soundness Bugs in ZK Circuits</a></div>
-        </div>
-      </div>
-
-      <div class="article-group">
-        <div class="article-group-title">AI &amp; Music</div>
-        <div class="article-list">
-          <div class="article-item"><span class="article-year"></span><a href="https://muellerberndt.medium.com/rage-of-the-machine-an-ai-makes-metal-music-f299dc1f706a" target="_blank">Rage of the Machine: An AI Makes Metal</a></div>
-        </div>
-      </div>
-
-      <div class="article-group">
-        <div class="article-group-title">Satire &amp; Misc</div>
-        <div class="article-list">
-          <div class="article-item"><span class="article-year"></span><a href="https://muellerberndt.medium.com/i-asked-gpt-3-for-the-question-to-42-i-didnt-like-its-answer-and-neither-will-you-33f425a4d60f" target="_blank">I Asked GPT-3 for the Question to "42"</a></div>
-          <div class="article-item"><span class="article-year">~2017</span><a href="https://medium.com/hackernoon/the-definitive-guide-to-becoming-a-crypto-maximalist-82b64d02c707" target="_blank">The Definitive Guide to Becoming a Crypto Maximalist</a></div>
-          <div class="article-item"><span class="article-year"></span><a href="https://medium.com/coinmonks/how-to-become-a-cryptocurrency-thought-leader-on-twitter-f10ac1c26488" target="_blank">How to Become a Cryptocurrency Thought Leader on Twitter</a></div>
-          <div class="article-item"><span class="article-year">~2017</span><a href="https://medium.com/hackernoon/to-fork-or-not-to-fork-results-of-a-bitcoin-and-ethereum-community-survey-d46abe1d15dc" target="_blank">To Fork or Not to Fork? Bitcoin/Ethereum Community Survey</a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- ERA: THEORETICAL PHYSICS -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="era" id="physics">
-      <div class="era-header">
-        <span class="era-dot dot-rose"></span>
-        <span class="era-title c-rose">Theoretical Physics</span>
-        <span class="era-years">Side Quest</span>
-      </div>
-
-      <div class="work-list">
-        <div class="work highlight b-rose">
-          <div class="work-top">
-            <div class="work-icon bg-rose c-rose">&#8734;</div>
-            <div>
-              <div class="work-title">Observer Patch Holography</div>
-              <div class="work-role">Framework · Book · 2025–2026</div>
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-green c-green">&#9654;</div>
+              <div>
+                <div class="work-title">Obfuscation Metrics</div>
+                <div class="work-role">Research Tool</div>
+              </div>
+            </div>
+            <p class="work-desc">Framework for measuring and evaluating code obfuscation effectiveness. Directly related to the MASTG Reverse Engineering chapter.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/obfuscation-metrics" class="work-link" target="_blank">GitHub</a>
             </div>
           </div>
-          <p class="work-desc">Theoretical framework proposing to unify quantum mechanics and general relativity from information-theoretic axioms. Derives Lorentz invariance, Einstein's equations, and gauge symmetry from 4 axioms. Published as the book "Reverse Engineering Reality."</p>
-          <div class="work-links">
-            <a href="https://oth-book.lovable.app/" class="work-link" target="_blank">Book</a>
-            <a href="https://github.com/muellerberndt/observer-patch-holography" class="work-link" target="_blank">GitHub</a>
-            <a href="https://github.com/muellerberndt/reverse-engineering-reality" class="work-link" target="_blank">Book Source</a>
-            <a href="https://muellerberndt.medium.com/answering-10-of-the-hardest-questions-in-physics-and-some-bonus-questions-51222bf2419f" class="work-link" target="_blank">Article</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- ERA: INTERACTIVE LEARNING PLATFORMS -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="era" id="learning">
-      <div class="era-header">
-        <span class="era-dot dot-amber"></span>
-        <span class="era-title c-amber">Interactive Learning Platforms</span>
-        <span class="era-years">2025 — Present · floatingpragma.io</span>
-      </div>
-
-      <div class="work-list">
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-green c-green">&#9654;</div>
-            <div>
-              <div class="work-title">STARK Lab</div>
-              <div class="work-role">Interactive Tutorial</div>
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-green c-green">&#9654;</div>
+              <div>
+                <div class="work-title">More Mobile Tools</div>
+                <div class="work-role">apkx · Android Security Checklist · Uncrackable Apps</div>
+              </div>
+            </div>
+            <p class="work-desc">apkx (290 stars): One-step APK decompilation. Android App Security Checklist (891 stars): Widely-referenced security checklist. Uncrackable Apps: Challenge crackmes for MASTG training.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/apkx" class="work-link" target="_blank">apkx</a>
+              <a href="https://github.com/muellerberndt/android_app_security_checklist" class="work-link" target="_blank">Checklist</a>
+              <a href="https://github.com/muellerberndt/uncrackable_app" class="work-link" target="_blank">Crackmes</a>
             </div>
           </div>
-          <p class="work-desc">Interactive, step-by-step tutorial for understanding STARK proofs intuitively. Build traces, constraints, and FRI from scratch.</p>
-          <div class="work-links">
-            <a href="https://floatingpragma.io/starklab/" class="work-link" target="_blank">Launch</a>
+        </div>
+
+        <!-- Vantage Point Advisories -->
+        <h3 class="section-subhead">Vantage Point Advisories</h3>
+        <div class="advisory-list">
+          <div class="advisory"><span class="advisory-date">Dec 2014</span><span><a href="https://www.exploit-db.com/exploits/35593" target="_blank">SysAid Server — Unauthenticated arbitrary file disclosure / LDAP credential theft</a></span></div>
+          <div class="advisory"><span class="advisory-date">Aug 2015</span><span><a href="https://www.exploit-db.com/exploits/37816" target="_blank">Cisco CUCM — Shellshock, LFI, ping execution, hardcoded session ID bypass</a></span></div>
+        </div>
+      </section>
+
+      <!-- ─────── ERA: SMART CONTRACT SECURITY ─────── -->
+      <section class="era reveal" id="contracts">
+        <div class="era-marker dot-purple"></div>
+        <div class="era-header">
+          <span class="era-title c-purple">Smart Contract Security</span>
+          <span class="era-years">2017 — 2020 · ConsenSys Diligence</span>
+        </div>
+        <p class="era-context">
+          Built Mythril, the first widely-used open-source symbolic execution engine for Ethereum smart contracts.
+          Spoke at DEF CON 27 and HITB Amsterdam. Nominated for a Pwnie Award.
+        </p>
+
+        <div class="work-list">
+          <!-- Mythril -->
+          <div class="work featured b-purple">
+            <div class="work-top">
+              <div class="work-icon bg-purple c-purple">&#9733;</div>
+              <div>
+                <div class="work-title">Mythril</div>
+                <div class="work-role">Creator · 4,200+ stars</div>
+              </div>
+            </div>
+            <p class="work-desc">Pioneering open-source security analysis tool for EVM bytecode. Uses symbolic execution, SMT solving, and taint analysis to find vulnerabilities in Ethereum smart contracts. Called "the nmap of Ethereum."</p>
+            <div class="excerpt" style="border-color: var(--accent-purple);">
+              "Mythril operates directly on EVM bytecode, building a control flow graph and exploring execution paths symbolically. For each path, it constructs a set of constraints that are fed to an SMT solver. If the solver finds a satisfying assignment that triggers a security property violation — say, an unchecked CALL to a user-controlled address — it reports a concrete exploit."
+              <span class="excerpt-source">— Smashing Ethereum Smart Contracts for Fun and ACTUAL Profit, HITB 2018</span>
+            </div>
+            <div class="work-links">
+              <a href="https://github.com/ConsenSysDiligence/mythril" class="work-link" target="_blank">GitHub</a>
+              <a href="https://medium.com/hackernoon/introducing-mythril-a-framework-for-bug-hunting-on-the-ethereum-blockchain-9dc5588f82f6" class="work-link" target="_blank">Announcement</a>
+              <span class="work-stats">4,200+ stars</span>
+            </div>
+          </div>
+
+          <!-- Smashing Smart Contracts -->
+          <div class="work featured b-purple">
+            <div class="work-top">
+              <div class="work-icon bg-purple c-purple">&#9670;</div>
+              <div>
+                <div class="work-title">Smashing Smart Contracts for Fun and ACTUAL Profit</div>
+                <div class="work-role">Paper + Talk · HITB 2018 Amsterdam · Pwnie Nominated</div>
+              </div>
+            </div>
+            <p class="work-desc">Research paper and talk on symbolic-execution-based analysis of EVM smart contracts. Introduced Mythril's symbolic analysis approach and the LASER symbolic execution engine.</p>
+            <div class="work-links">
+              <a href="https://conference.hitb.org/hitbsecconf2018ams/materials/WHITEPAPERS/WHITEPAPER%20-%20Bernhard%20Mueller%20-%20Smashing%20Ethereum%20Smart%20Contracts%20for%20Fun%20and%20ACTUAL%20Profit.pdf" class="work-link" target="_blank">Whitepaper</a>
+              <a href="https://conference.hitb.org/hitbsecconf2018ams/materials/D1T2%20-%20Bernhard%20Mueller%20-%20Smashing%20Ethereum%20Smart%20Contracts%20for%20Fun%20and%20ACTUAL%20Profit.pdf" class="work-link" target="_blank">Slides</a>
+              <a href="https://github.com/muellerberndt/smashing-smart-contracts" class="work-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <!-- The Ether Wars -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-purple c-purple">&#9670;</div>
+              <div>
+                <div class="work-title">The Ether Wars</div>
+                <div class="work-role">Talk · DEF CON 27 · 2019 · with Daniel Luca</div>
+              </div>
+            </div>
+            <p class="work-desc">Talk on the adversarial landscape on Ethereum — exploits, counter-exploits, and honeypots. Demonstrated the Scrooge McEtherface auto-exploitation bot live on stage.</p>
+            <div class="excerpt" style="border-color: var(--accent-purple);">
+              "Ethereum's mainnet is an adversarial jungle. Automated bots front-run transactions, honeypot contracts lure in greedy attackers, and counter-exploit bots race to drain vulnerable contracts before the original exploiter can. We built Scrooge McEtherface to play this game — a bot that uses Z3 to automatically find and exploit contracts holding unprotected ETH."
+              <span class="excerpt-source">— The Ether Wars, DEF CON 27, 2019</span>
+            </div>
+          </div>
+
+          <!-- DEF CON Talk Card -->
+          <a href="https://media.defcon.org/DEF%20CON%2027/DEF%20CON%2027%20presentations/DEFCON-27-Bernhard-Mueller-Demo-Videos/" class="talk-card" target="_blank">
+            <div class="talk-play"></div>
+            <div class="talk-info">
+              <div class="talk-title">The Ether Wars</div>
+              <div class="talk-venue">DEF CON 27 · Las Vegas · 2019</div>
+            </div>
+            <div class="talk-links">
+              <a href="https://media.defcon.org/DEF%20CON%2027/DEF%20CON%2027%20presentations/DEFCON-27-Bernhard-Mueller-The-Ether-Wars.pdf" target="_blank" onclick="event.stopPropagation()">Slides</a>
+            </div>
+          </a>
+
+          <!-- Scrooge McEtherface -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-purple c-purple">&#9654;</div>
+              <div>
+                <div class="work-title">Scrooge McEtherface</div>
+                <div class="work-role">Tool · 153 stars</div>
+              </div>
+            </div>
+            <p class="work-desc">Ethereum auto-looter using symbolic execution and Z3 solver to automatically extract ETH from vulnerable contracts.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/scrooge-mcetherface" class="work-link" target="_blank">GitHub</a>
+              <a href="https://blog.goodaudience.com/automating-smart-contract-exploitation-and-looting-d43e9740b41c" class="work-link" target="_blank">Article</a>
+            </div>
+          </div>
+
+          <!-- More tools -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-purple c-purple">&#9654;</div>
+              <div>
+                <div class="work-title">More Contract Tools</div>
+                <div class="work-role">SolFuzz · DeFi Hacking Playground · Rektosaurus · Storm</div>
+              </div>
+            </div>
+            <p class="work-desc">SolFuzz (32 stars): Hybrid fuzzer with symbolic analysis. DeFi Hacking Playground (32 stars): Flash loan attack lab. Rektosaurus (51 stars): NFT metadata XSS testing. Storm (39 stars): EVM node stress-testing/fuzzing.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/solfuzz" class="work-link" target="_blank">SolFuzz</a>
+              <a href="https://github.com/muellerberndt/defi-hacking-playground" class="work-link" target="_blank">DeFi Playground</a>
+              <a href="https://github.com/muellerberndt/rektosaurus" class="work-link" target="_blank">Rektosaurus</a>
+              <a href="https://github.com/muellerberndt/storm" class="work-link" target="_blank">Storm</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── ERA: AI & AUTONOMOUS AGENTS ─────── -->
+      <section class="era reveal" id="ai">
+        <div class="era-marker dot-cyan"></div>
+        <div class="era-header">
+          <span class="era-title c-cyan">AI &amp; Autonomous Agents</span>
+          <span class="era-years">2023 — Present · Sherlock</span>
+        </div>
+        <p class="era-context">
+          Building AI agents that find security vulnerabilities autonomously.
+          From viral early agent experiments to production-grade security auditors with published research.
+        </p>
+
+        <div class="work-list">
+          <!-- Hound -->
+          <div class="work featured b-cyan">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9733;</div>
+              <div>
+                <div class="work-title">Hound</div>
+                <div class="work-role">Creator · 716 stars · arXiv Paper (Oct 2025)</div>
+              </div>
+            </div>
+            <p class="work-desc">Language-agnostic AI code security auditor that builds adaptive knowledge graphs for deep iterative reasoning. Two-model architecture (junior agent + senior guidance). On ScaBench: 31.2% micro recall vs 8.3% baseline.</p>
+            <div class="excerpt" style="border-color: var(--accent-cyan);">
+              "We introduce Hound, a multi-agent system that constructs relation-first knowledge graphs to reason about complex software systems. Unlike single-pass LLM auditors, Hound's junior agent explores code iteratively, building a structured representation of data flows, trust boundaries, and invariant assumptions. A senior model guides exploration strategy, pruning false paths and amplifying signal — achieving a 3.7x improvement in vulnerability recall over baseline approaches."
+              <span class="excerpt-source">— Hound: Relation-First Knowledge Graphs for Complex-System Reasoning in Security Audits, arXiv:2510.09633</span>
+            </div>
+            <div class="work-links">
+              <a href="https://github.com/scabench-org/hound" class="work-link" target="_blank">GitHub</a>
+              <a href="https://arxiv.org/abs/2510.09633" class="work-link" target="_blank">arXiv Paper</a>
+              <span class="work-stats">716 stars</span>
+            </div>
+          </div>
+
+          <!-- ScaBench -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9654;</div>
+              <div>
+                <div class="work-title">ScaBench</div>
+                <div class="work-role">Creator · 100 stars</div>
+              </div>
+            </div>
+            <p class="work-desc">Benchmarking framework for evaluating AI smart contract audit agents against real-world vulnerability datasets.</p>
+            <div class="work-links">
+              <a href="https://github.com/scabench-org/scabench" class="work-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <!-- MiniAGI -->
+          <div class="work featured b-cyan">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9733;</div>
+              <div>
+                <div class="work-title">MiniAGI</div>
+                <div class="work-role">Creator · 2,906 stars</div>
+              </div>
+            </div>
+            <p class="work-desc">Minimal autonomous AI agent based on OpenAI API. Went viral during the 2023 AI agent wave — one of the simplest yet most capable early agent frameworks. Demonstrated that a competent autonomous agent could be built in a few hundred lines of Python.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/mini-agi" class="work-link" target="_blank">GitHub</a>
+              <span class="work-stats">2,906 stars</span>
+            </div>
+          </div>
+
+          <!-- Darwin GPT -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9654;</div>
+              <div>
+                <div class="work-title">Darwin GPT</div>
+                <div class="work-role">Experiment · 62 stars</div>
+              </div>
+            </div>
+            <p class="work-desc">Experiment in AI self-replication — a GPT-based agent that can spawn copies of itself.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/darwin-gpt" class="work-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <!-- Legion -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9654;</div>
+              <div>
+                <div class="work-title">Legion</div>
+                <div class="work-role">Tool · 129 stars</div>
+              </div>
+            </div>
+            <p class="work-desc">AI-assisted web3 bug bounty hunting assistant. Tracks live bounties and deploys autonomous agents to find vulnerabilities.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/legion" class="work-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <!-- Mancala -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9654;</div>
+              <div>
+                <div class="work-title">Mancala Deep-Q</div>
+                <div class="work-role">Reinforcement Learning Experiment</div>
+              </div>
+            </div>
+            <p class="work-desc">Solving the ancient board game Mancala using deep Q-learning. Includes OpenAI Gym environment, agent vs. agent self-play, and PyGame UI.</p>
+            <div class="work-links">
+              <a href="https://github.com/muellerberndt/mancala-deepq" class="work-link" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <!-- Rage of the Machine -->
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9654;</div>
+              <div>
+                <div class="work-title">Rage of the Machine</div>
+                <div class="work-role">Music AI · TransformerXL</div>
+              </div>
+            </div>
+            <p class="work-desc">Polyphonic, multi-instrument music transformer trained on 3,604 metal/grunge/punk MIDI songs. Custom tokenizer, 200 hours on 4x Nvidia T4 GPUs. Generates original metal, industrial, punk, and electronic tracks.</p>
+            <div class="excerpt" style="border-color: var(--accent-cyan);">
+              "The model learned to produce plausible song structures — intros, verses, breakdowns, and codas — across multiple simultaneous instruments. While it occasionally hallucinates impossible guitar stretches, the generated drum patterns are surprisingly groovy."
+              <span class="excerpt-source">— Rage of the Machine: An AI Makes Metal, Medium</span>
+            </div>
+            <div class="work-links">
+              <a href="https://muellerberndt.medium.com/rage-of-the-machine-an-ai-makes-metal-music-f299dc1f706a" class="work-link" target="_blank">Article</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── ERA: WRITINGS ─────── -->
+      <section class="era reveal" id="writings">
+        <div class="era-marker dot-amber"></div>
+        <div class="era-header">
+          <span class="era-title c-amber">Writings</span>
+          <span class="era-years">Medium &amp; Beyond</span>
+        </div>
+        <p class="era-context">
+          Technical deep-dives, malware analysis, and occasional satire.
+        </p>
+
+        <div class="article-group">
+          <div class="article-group-title">Smart Contract Security</div>
+          <div class="article-list">
+            <div class="article-item"><span class="article-year">2017</span><a href="https://medium.com/hackernoon/introducing-mythril-a-framework-for-bug-hunting-on-the-ethereum-blockchain-9dc5588f82f6" target="_blank">Introducing Mythril</a></div>
+            <div class="article-item"><span class="article-year">2017</span><a href="https://medium.com/hackernoon/what-caused-the-latest-100-million-ethereum-bug-and-a-detection-tool-for-similar-bugs-7b80f8ab7279" target="_blank">What Killed the Parity Multisig Wallet</a></div>
+            <div class="article-item"><span class="article-year">~2018</span><a href="https://medium.com/hackernoon/scanning-ethereum-smart-contracts-for-vulnerabilities-b5caefd995df" target="_blank">Analyzing Ethereum Smart Contracts for Vulnerabilities</a></div>
+            <div class="article-item"><span class="article-year">2018</span><a href="https://medium.com/hackernoon/practical-smart-contract-security-analysis-and-exploitation-part-1-6c2f2320b0c" target="_blank">Practical Smart Contract Security Analysis and Exploitation — Part 1</a></div>
+            <div class="article-item"><span class="article-year">~2018</span><a href="https://media.consensys.net/detecting-batchoverflow-and-similar-flaws-in-ethereum-smart-contracts-93cf5a5aaac8" target="_blank">Detecting Integer Arithmetic Bugs (batchOverflow)</a></div>
+            <div class="article-item"><span class="article-year">~2019</span><a href="https://muellerberndt.medium.com/catching-weird-security-bugs-in-solidity-smart-contracts-with-invariant-checks-435582dfb5bd" target="_blank">Catching Weird Security Bugs with Global Invariant Checks</a></div>
+            <div class="article-item"><span class="article-year">~2019</span><a href="https://blog.goodaudience.com/automating-smart-contract-exploitation-and-looting-d43e9740b41c" target="_blank">Automated Smart Contract Looting with SMT Solvers</a></div>
+            <div class="article-item"><span class="article-year">~2019</span><a href="https://medium.com/coinmonks/advanced-smart-contract-security-verification-in-remix-9630b43695e5" target="_blank">Advanced Smart Contract Security Verification in Remix</a></div>
+            <div class="article-item"><span class="article-year">~2019</span><a href="https://medium.com/consensys-diligence/all-ethereum-security-tools-built-by-consensys-diligence-dd918248f978" target="_blank">Ethereum Security Tools Built by ConsenSys Diligence</a></div>
           </div>
         </div>
 
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-purple c-purple">&#9654;</div>
-            <div>
-              <div class="work-title">Awesome ZK Proofs</div>
-              <div class="work-role">Curated Learning Path</div>
-            </div>
-          </div>
-          <p class="work-desc">Curated learning path for zero-knowledge proofs. Three parallel tracks: SNARKs, STARKs, and Bulletproofs.</p>
-          <div class="work-links">
-            <a href="https://floatingpragma.io/awesome-zk-proofs/" class="work-link" target="_blank">Launch</a>
+        <div class="article-group">
+          <div class="article-group-title">Web3 Analysis</div>
+          <div class="article-list">
+            <div class="article-item"><span class="article-year">2021</span><a href="https://muellerberndt.medium.com/is-tether-a-black-swan-51095720b01c" target="_blank">Is Tether a Black Swan?</a></div>
+            <div class="article-item"><span class="article-year">2022</span><a href="https://muellerberndt.medium.com/building-a-secure-nft-gaming-experience-a-herdsmans-diary-1-91aab11139dc" target="_blank">Building a Secure NFT Gaming Experience — Herdsman's Diary</a></div>
+            <div class="article-item"><span class="article-year">2022</span><a href="https://muellerberndt.medium.com/wolf-game-herdsmans-report-5802c9d477bd" target="_blank">Wolf Game — Herdsman's Report</a></div>
+            <div class="article-item"><span class="article-year">2024</span><a href="https://muellerberndt.medium.com/a-brief-analysis-of-angel-drainer-1660d15c9248" target="_blank">A Brief Analysis of Angel Drainer</a></div>
+            <div class="article-item"><span class="article-year">2024</span><a href="https://muellerberndt.medium.com/a-peek-inside-inferno-drainer-0a69647b85ca" target="_blank">Reverse Engineering Inferno Drainer</a></div>
           </div>
         </div>
 
-        <div class="work">
-          <div class="work-top">
-            <div class="work-icon bg-cyan c-cyan">&#9654;</div>
-            <div>
-              <div class="work-title">Awesome AI Security</div>
-              <div class="work-role">Curated Learning Path</div>
-            </div>
-          </div>
-          <p class="work-desc">Curated learning path for AI security. Adversarial attacks, prompt injection, and AI-powered pentesting.</p>
-          <div class="work-links">
-            <a href="https://floatingpragma.io/awesome-ai-security/" class="work-link" target="_blank">Launch</a>
+        <div class="article-group">
+          <div class="article-group-title">AI Security Auditing</div>
+          <div class="article-list">
+            <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/unleashing-the-hound-how-ai-agents-find-deep-logic-bugs-in-any-codebase-64c2110e3a6f" target="_blank">Unleashing the Hound: AI Agents Find Deep Logic Bugs</a></div>
+            <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/hunting-for-security-bugs-in-code-with-ai-agents-a-full-walkthrough-a0dc24e1adf0" target="_blank">Hunting for Security Bugs with AI Agents: Full Walkthrough</a></div>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div class="article-group">
+          <div class="article-group-title">Zero-Knowledge Proofs</div>
+          <div class="article-list">
+            <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/the-security-researchers-guide-to-mathematics-000dc0c98a0f" target="_blank">The Security Researcher's Guide to Mathematics</a></div>
+            <div class="article-item"><span class="article-year">2025</span><a href="https://muellerberndt.medium.com/stark-lab-an-interactive-deep-dive-into-zero-knowledge-proofs-d5894121b22e" target="_blank">STARK Lab: An Interactive Deep Dive into ZK Proofs</a></div>
+            <div class="article-item"><span class="article-year">2026</span><a href="https://muellerberndt.medium.com/finding-soundness-bugs-in-zk-circuits-ea23387a0e1e" target="_blank">A Practical Guide to Finding Soundness Bugs in ZK Circuits</a></div>
+          </div>
+        </div>
+
+        <div class="article-group">
+          <div class="article-group-title">AI &amp; Music</div>
+          <div class="article-list">
+            <div class="article-item"><span class="article-year"></span><a href="https://muellerberndt.medium.com/rage-of-the-machine-an-ai-makes-metal-music-f299dc1f706a" target="_blank">Rage of the Machine: An AI Makes Metal</a></div>
+          </div>
+        </div>
+
+        <div class="article-group">
+          <div class="article-group-title">Satire &amp; Misc</div>
+          <div class="article-list">
+            <div class="article-item"><span class="article-year"></span><a href="https://muellerberndt.medium.com/i-asked-gpt-3-for-the-question-to-42-i-didnt-like-its-answer-and-neither-will-you-33f425a4d60f" target="_blank">I Asked GPT-3 for the Question to "42"</a></div>
+            <div class="article-item"><span class="article-year">~2017</span><a href="https://medium.com/hackernoon/the-definitive-guide-to-becoming-a-crypto-maximalist-82b64d02c707" target="_blank">The Definitive Guide to Becoming a Crypto Maximalist</a></div>
+            <div class="article-item"><span class="article-year"></span><a href="https://medium.com/coinmonks/how-to-become-a-cryptocurrency-thought-leader-on-twitter-f10ac1c26488" target="_blank">How to Become a Cryptocurrency Thought Leader on Twitter</a></div>
+            <div class="article-item"><span class="article-year">~2017</span><a href="https://medium.com/hackernoon/to-fork-or-not-to-fork-results-of-a-bitcoin-and-ethereum-community-survey-d46abe1d15dc" target="_blank">To Fork or Not to Fork? Bitcoin/Ethereum Community Survey</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── ERA: THEORETICAL PHYSICS ─────── -->
+      <section class="era reveal" id="physics">
+        <div class="era-marker dot-rose"></div>
+        <div class="era-header">
+          <span class="era-title c-rose">Theoretical Physics</span>
+          <span class="era-years">Side Quest</span>
+        </div>
+        <p class="era-context">
+          Because why stop at breaking software when you can try to reverse-engineer reality itself?
+        </p>
+
+        <div class="work-list">
+          <div class="work featured b-rose">
+            <div class="work-top">
+              <div class="work-icon bg-rose c-rose">&#8734;</div>
+              <div>
+                <div class="work-title">Observer Patch Holography</div>
+                <div class="work-role">Framework · Book · 2025–2026</div>
+              </div>
+            </div>
+            <p class="work-desc">Theoretical framework proposing to unify quantum mechanics and general relativity from information-theoretic axioms. Derives Lorentz invariance, Einstein's equations, and gauge symmetry from 4 axioms. Published as the book "Reverse Engineering Reality."</p>
+            <div class="excerpt" style="border-color: var(--accent-rose);">
+              "What if spacetime isn't fundamental, but emergent? We start from four information-theoretic axioms — finite information density, observer-local patches, holographic encoding, and consistency under patch overlap — and show that the familiar physics of general relativity and quantum mechanics drops out as necessary consequences. The universe, in this view, is a self-consistent error-correcting code."
+              <span class="excerpt-source">— Reverse Engineering Reality, 2025</span>
+            </div>
+            <div class="work-links">
+              <a href="https://oth-book.lovable.app/" class="work-link" target="_blank">Read the Book</a>
+              <a href="https://github.com/muellerberndt/observer-patch-holography" class="work-link" target="_blank">GitHub</a>
+              <a href="https://github.com/muellerberndt/reverse-engineering-reality" class="work-link" target="_blank">Book Source</a>
+              <a href="https://muellerberndt.medium.com/answering-10-of-the-hardest-questions-in-physics-and-some-bonus-questions-51222bf2419f" class="work-link" target="_blank">Article</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── ERA: INTERACTIVE LEARNING PLATFORMS ─────── -->
+      <section class="era reveal" id="platforms">
+        <div class="era-marker dot-amber"></div>
+        <div class="era-header">
+          <span class="era-title c-amber">Interactive Learning Platforms</span>
+          <span class="era-years">2025 — Present · floatingpragma.io</span>
+        </div>
+        <p class="era-context">
+          Open-source interactive tutorials for complex topics, built to make hard things intuitive.
+        </p>
+
+        <div class="work-list">
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-green c-green">&#9654;</div>
+              <div>
+                <div class="work-title">STARK Lab</div>
+                <div class="work-role">Interactive Tutorial</div>
+              </div>
+            </div>
+            <p class="work-desc">Interactive, step-by-step tutorial for understanding STARK proofs intuitively. Build traces, constraints, and FRI from scratch.</p>
+            <div class="work-links">
+              <a href="https://floatingpragma.io/starklab/" class="work-link" target="_blank">Launch</a>
+            </div>
+          </div>
+
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-purple c-purple">&#9654;</div>
+              <div>
+                <div class="work-title">Awesome ZK Proofs</div>
+                <div class="work-role">Curated Learning Path</div>
+              </div>
+            </div>
+            <p class="work-desc">Curated learning path for zero-knowledge proofs. Three parallel tracks: SNARKs, STARKs, and Bulletproofs.</p>
+            <div class="work-links">
+              <a href="https://floatingpragma.io/awesome-zk-proofs/" class="work-link" target="_blank">Launch</a>
+            </div>
+          </div>
+
+          <div class="work">
+            <div class="work-top">
+              <div class="work-icon bg-cyan c-cyan">&#9654;</div>
+              <div>
+                <div class="work-title">Awesome AI Security</div>
+                <div class="work-role">Curated Learning Path</div>
+              </div>
+            </div>
+            <p class="work-desc">Curated learning path for AI security. Adversarial attacks, prompt injection, and AI-powered pentesting.</p>
+            <div class="work-links">
+              <a href="https://floatingpragma.io/awesome-ai-security/" class="work-link" target="_blank">Launch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- end timeline -->
 
     <!-- Footer -->
     <footer>
       <div class="footer-links">
-        <a href="/">Floating Pragma</a>
+        <a href="/">Pragma</a>
         <a href="https://github.com/muellerberndt" target="_blank">GitHub</a>
         <a href="https://twitter.com/muellerberndt" target="_blank">Twitter</a>
         <a href="https://muellerberndt.medium.com" target="_blank">Medium</a>
       </div>
-      <p class="copyright">&copy; Bernhard Mueller</p>
+      <p class="copyright">&copy; Pragma</p>
     </footer>
   </div>
 
@@ -1154,7 +1503,7 @@
           e.preventDefault();
           const target = document.querySelector(href);
           if (target) {
-            const offset = 110; // top-bar + era-nav
+            const offset = 110;
             const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
             window.scrollTo({ top: y, behavior: 'smooth' });
           }
@@ -1165,7 +1514,7 @@
     // Highlight active era pill on scroll
     const sections = document.querySelectorAll('.era');
     const pills = document.querySelectorAll('.era-pill');
-    const observer = new IntersectionObserver(entries => {
+    const pillObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
@@ -1181,7 +1530,18 @@
         }
       });
     }, { rootMargin: '-120px 0px -60% 0px' });
-    sections.forEach(s => observer.observe(s));
+    sections.forEach(s => pillObserver.observe(s));
+
+    // Reveal-on-scroll animation
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+    reveals.forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>

@@ -343,46 +343,6 @@
       background: var(--bg-primary);
       z-index: 2;
     }
-
-    /* Scroll tracker dot */
-    .scroll-tracker {
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 50;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .scroll-tracker.visible {
-      opacity: 1;
-    }
-    .tracker-dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--accent-cyan);
-      box-shadow: 0 0 12px rgba(78, 231, 255, 0.6), 0 0 24px rgba(78, 231, 255, 0.3);
-    }
-    .tracker-year {
-      position: absolute;
-      right: calc(100% + 14px);
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--accent-cyan);
-      text-shadow: 0 0 12px rgba(78, 231, 255, 0.4);
-      white-space: nowrap;
-      font-variant-numeric: tabular-nums;
-    }
-    @media (max-width: 768px) {
-      .tracker-year {
-        right: auto;
-        left: calc(100% + 14px);
-        font-size: 0.7rem;
-      }
-    }
     .era-header {
       display: flex;
       align-items: baseline;
@@ -867,14 +827,8 @@
     <!-- ═══════════════════════════════════════════ -->
     <div class="timeline">
 
-      <!-- Scroll tracker dot -->
-      <div class="scroll-tracker" id="scrollTracker">
-        <span class="tracker-year" id="trackerYear">2005</span>
-        <div class="tracker-dot"></div>
-      </div>
-
       <!-- ─────── ERA: EARLY SECURITY RESEARCH ─────── -->
-      <section class="era reveal" id="early" data-year-start="2005" data-year-end="2013">
+      <section class="era reveal" id="early">
         <div class="era-marker dot-blue"></div>
         <div class="era-header">
           <span class="era-title c-blue">Early Security Research</span>
@@ -955,7 +909,7 @@
       </section>
 
       <!-- ─────── ERA: MOBILE SECURITY ─────── -->
-      <section class="era reveal" id="mobile" data-year-start="2014" data-year-end="2018">
+      <section class="era reveal" id="mobile">
         <div class="era-marker dot-green"></div>
         <div class="era-header">
           <span class="era-title c-green">Mobile Security</span>
@@ -1091,7 +1045,7 @@
       </section>
 
       <!-- ─────── ERA: SMART CONTRACT SECURITY ─────── -->
-      <section class="era reveal" id="contracts" data-year-start="2017" data-year-end="2020">
+      <section class="era reveal" id="contracts">
         <div class="era-marker dot-purple"></div>
         <div class="era-header">
           <span class="era-title c-purple">Smart Contract Security</span>
@@ -1206,7 +1160,7 @@
       </section>
 
       <!-- ─────── ERA: AI & AUTONOMOUS AGENTS ─────── -->
-      <section class="era reveal" id="ai" data-year-start="2023" data-year-end="2025">
+      <section class="era reveal" id="ai">
         <div class="era-marker dot-cyan"></div>
         <div class="era-header">
           <span class="era-title c-cyan">AI &amp; Autonomous Agents</span>
@@ -1337,7 +1291,7 @@
       </section>
 
       <!-- ─────── ERA: WRITINGS ─────── -->
-      <section class="era reveal" id="writings" data-year-start="2018" data-year-end="2025">
+      <section class="era reveal" id="writings">
         <div class="era-marker dot-amber"></div>
         <div class="era-header">
           <span class="era-title c-amber">Writings</span>
@@ -1409,7 +1363,7 @@
       </section>
 
       <!-- ─────── ERA: THEORY OF EVERYTHING ─────── -->
-      <section class="era reveal" id="physics" data-year-start="2025" data-year-end="2026">
+      <section class="era reveal" id="physics">
         <div class="era-marker dot-rose"></div>
         <div class="era-header">
           <span class="era-title c-rose">Theory of Everything</span>
@@ -1451,7 +1405,7 @@
       </section>
 
       <!-- ─────── ERA: INTERACTIVE LEARNING PLATFORMS ─────── -->
-      <section class="era reveal" id="platforms" data-year-start="2025" data-year-end="2026">
+      <section class="era reveal" id="platforms">
         <div class="era-marker dot-amber"></div>
         <div class="era-header">
           <span class="era-title c-amber">Interactive Learning Platforms</span>
@@ -1568,84 +1522,6 @@
       });
     }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
     reveals.forEach(el => revealObserver.observe(el));
-
-    // ── Scroll tracker dot with year counter ──
-    (() => {
-      const tracker = document.getElementById('scrollTracker');
-      const yearEl = document.getElementById('trackerYear');
-      const timeline = document.querySelector('.timeline');
-      const eras = [...document.querySelectorAll('.era[data-year-start]')];
-      if (!tracker || !timeline || eras.length === 0) return;
-
-      // The timeline line's left offset (matches CSS)
-      const getLineLeft = () => {
-        const timelineRect = timeline.getBoundingClientRect();
-        const isMobile = window.innerWidth <= 768;
-        const lineLeftPx = isMobile ? 12 : 20;
-        return timelineRect.left + lineLeftPx;
-      };
-
-      let ticking = false;
-      const onScroll = () => {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(() => {
-          ticking = false;
-          const timelineRect = timeline.getBoundingClientRect();
-          const viewportMid = window.innerHeight * 0.35;
-
-          // Timeline bounds in viewport
-          const tlTop = timelineRect.top;
-          const tlBottom = timelineRect.bottom;
-
-          // Only show tracker when timeline is in view
-          if (tlTop > viewportMid || tlBottom < viewportMid) {
-            tracker.classList.remove('visible');
-            return;
-          }
-          tracker.classList.add('visible');
-
-          // Position dot on the line
-          const lineLeft = getLineLeft();
-          tracker.style.left = (lineLeft - 7) + 'px'; // center 14px dot on 2px line
-          tracker.style.top = viewportMid + 'px';
-
-          // Find which era we're in and interpolate year
-          let currentYear = 2005;
-          for (let i = 0; i < eras.length; i++) {
-            const eraRect = eras[i].getBoundingClientRect();
-            const eraTop = eraRect.top;
-            const eraBottom = eraRect.bottom;
-
-            if (viewportMid >= eraTop && viewportMid <= eraBottom) {
-              const progress = (viewportMid - eraTop) / (eraBottom - eraTop);
-              const startYear = parseInt(eras[i].dataset.yearStart);
-              const endYear = parseInt(eras[i].dataset.yearEnd);
-              currentYear = Math.round(startYear + progress * (endYear - startYear));
-              break;
-            } else if (viewportMid < eraTop && i === 0) {
-              currentYear = parseInt(eras[0].dataset.yearStart);
-              break;
-            } else if (i < eras.length - 1) {
-              const nextRect = eras[i + 1].getBoundingClientRect();
-              if (viewportMid > eraBottom && viewportMid < nextRect.top) {
-                // Between eras — show the end year of current era
-                currentYear = parseInt(eras[i].dataset.yearEnd);
-                break;
-              }
-            } else {
-              currentYear = parseInt(eras[i].dataset.yearEnd);
-            }
-          }
-
-          yearEl.textContent = currentYear;
-        });
-      };
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', onScroll, { passive: true });
-      onScroll();
-    })();
   </script>
 </body>
 </html>

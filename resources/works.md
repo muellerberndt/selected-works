@@ -234,7 +234,7 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 ## Theoretical Physics
 
 ### Observer Patch Holography
-- **What:** Theoretical framework proposing to unify quantum mechanics and general relativity from information-theoretic axioms. Derives Lorentz invariance, Einstein's equations, gauge symmetry from 4 axioms.
+- **What:** Theory-of-everything reconstruction program that models reality as observer-based fixed-point consensus. Finite observer patches compare overlap-visible records, repair mismatch, and stabilize public physics; spacetime, gravity, gauge structure, particles, and observers are then recovered as effective outputs.
 - **GitHub:** https://github.com/FloatingPragma/observer-patch-holography (19 stars)
 - **Overview:** https://floatingpragma.io/oph/
 - **Book:** "Reverse Engineering Reality" — https://oph-book.floatingpragma.io/

@@ -237,6 +237,7 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 - **What:** Theory-of-everything reconstruction program that models reality as observer-based fixed-point consensus. Finite observer patches compare overlap-visible records, repair mismatch, and stabilize public physics; spacetime, gravity, gauge structure, particles, and observers are then recovered as effective outputs.
 - **GitHub:** https://github.com/FloatingPragma/observer-patch-holography (19 stars)
 - **Overview:** https://floatingpragma.io/oph/
+- **Textbooks:** https://learn.floatingpragma.io/
 - **Book:** "Reverse Engineering Reality" — https://oph-book.floatingpragma.io/
 - **Lab:** https://oph-lab.floatingpragma.io/
 - **Challenge:** https://challenge.floatingpragma.io/

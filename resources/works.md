@@ -240,6 +240,7 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 - **Textbooks:** https://learn.floatingpragma.io/
 - **Book:** "Reverse Engineering Reality" — https://oph-book.floatingpragma.io/
 - **Lab:** https://oph-lab.floatingpragma.io/
+- **Applications:** https://omega.floatingpragma.io/
 - **Challenge:** https://challenge.floatingpragma.io/
 - **Book source:** https://github.com/FloatingPragma/observer-patch-holography
 - **Article:** https://muellerberndt.medium.com/answering-10-of-the-hardest-questions-in-physics-and-some-bonus-questions-51222bf2419f — Jan 2026

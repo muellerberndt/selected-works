@@ -240,7 +240,6 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 - **Textbooks:** https://learn.floatingpragma.io/
 - **Technical paper:** https://floatingpragma.io/oph/papers/from-observer-consensus-to-standard-physics/
 - **Lab:** https://oph-lab.floatingpragma.io/
-- **Applications:** https://omega.floatingpragma.io/
 - **Challenge:** https://challenge.floatingpragma.io/
 - **Paper index:** https://floatingpragma.io/oph/papers/
 - **License:** https://github.com/FloatingPragma/observer-patch-holography/blob/main/LICENSE

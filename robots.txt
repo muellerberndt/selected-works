@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://floatingpragma.io/sitemap.xml
-Sitemap: https://floatingpragma.io/selected-works/sitemap.xml

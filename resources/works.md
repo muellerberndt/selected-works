@@ -238,7 +238,6 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 - **GitHub:** https://github.com/FloatingPragma/observer-patch-holography (19 stars)
 - **Preprint:** https://philpapers.org/rec/MUEFOC
 - **Textbooks:** https://learn.floatingpragma.io/
-- **Lab:** https://oph-lab.floatingpragma.io/
 - **Challenge:** https://challenge.floatingpragma.io/
 - **License:** https://github.com/FloatingPragma/observer-patch-holography/blob/main/LICENSE
 - **Anti-patent covenant:** https://github.com/FloatingPragma/observer-patch-holography/blob/main/PATENTS.md

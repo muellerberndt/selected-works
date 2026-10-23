@@ -236,12 +236,10 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 ### Observer Patch Holography
 - **What:** Theory-of-everything reconstruction program based on observer-like self-reading systems: finite patches compare overlap-visible records, repair mismatch, and stabilize public records. The corpus proves exact finite precursors for informational order, quantum records, rank-three carrier geometry, Lorentz algebra, and gauge structure, then gives explicitly conditional branches toward effective 3+1 spacetime, smooth Einstein gravity, particles, and physical observers. Faithful causal attachment, manifold and volume recovery, continuum limits, and laboratory realization remain named requirements rather than recovered outputs.
 - **GitHub:** https://github.com/FloatingPragma/observer-patch-holography (19 stars)
-- **Overview:** https://floatingpragma.io/oph/
+- **Preprint:** https://philpapers.org/rec/MUEFOC
 - **Textbooks:** https://learn.floatingpragma.io/
-- **Technical paper:** https://floatingpragma.io/oph/papers/from-observer-consensus-to-standard-physics/
 - **Lab:** https://oph-lab.floatingpragma.io/
 - **Challenge:** https://challenge.floatingpragma.io/
-- **Paper index:** https://floatingpragma.io/oph/papers/
 - **License:** https://github.com/FloatingPragma/observer-patch-holography/blob/main/LICENSE
 - **Anti-patent covenant:** https://github.com/FloatingPragma/observer-patch-holography/blob/main/PATENTS.md
 - **Article:** https://muellerberndt.medium.com/answering-10-of-the-hardest-questions-in-physics-and-some-bonus-questions-51222bf2419f — Jan 2026

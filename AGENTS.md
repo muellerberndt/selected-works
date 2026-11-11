@@ -56,12 +56,12 @@ The page deploys automatically via GitHub Actions to GitHub Pages whenever chang
 
 ## Project Context
 
-This is one of several properties under the [Floating Pragma](https://floatingpragma.io) umbrella:
+This is one of several properties under the [Floating Pragma](https://floatingpragma.ai) umbrella:
 
 | Property | Description |
 |----------|-------------|
-| [floatingpragma.io](https://floatingpragma.io) | Landing page |
-| [STARK Lab](https://floatingpragma.io/starklab/) | Interactive STARK proof tutorial |
-| [Awesome ZK Proofs](https://floatingpragma.io/awesome-zk-proofs/) | ZK learning path |
-| [Awesome AI Security](https://floatingpragma.io/awesome-ai-security/) | AI security learning path |
+| [floatingpragma.ai](https://floatingpragma.ai) | Landing page |
+| [STARK Lab](https://floatingpragma.ai/starklab/) | Interactive STARK proof tutorial |
+| [Awesome ZK Proofs](https://floatingpragma.ai/awesome-zk-proofs/) | ZK learning path |
+| [Awesome AI Security](https://floatingpragma.ai/awesome-ai-security/) | AI security learning path |
 | **Selected Works** | This page — career portfolio |

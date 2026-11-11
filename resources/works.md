@@ -237,7 +237,7 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 - **What:** Theory-of-everything reconstruction program based on observer-like self-reading systems: finite patches compare overlap-visible records, repair mismatch, and stabilize public records. The corpus proves exact finite precursors for informational order, quantum records, rank-three carrier geometry, Lorentz algebra, and gauge structure, then gives explicitly conditional branches toward effective 3+1 spacetime, smooth Einstein gravity, particles, and physical observers. Faithful causal attachment, manifold and volume recovery, continuum limits, and laboratory realization remain named requirements rather than recovered outputs.
 - **GitHub:** https://github.com/FloatingPragma/observer-patch-holography (19 stars)
 - **Preprint:** https://philpapers.org/rec/MUEFOC
-- **Textbooks:** https://learn.floatingpragma.io/
+- **Textbooks:** https://learn.floatingpragma.ai/
 - **Challenge:** https://challenge.floatingpragma.io/
 - **License:** https://github.com/FloatingPragma/observer-patch-holography/blob/main/LICENSE
 - **Anti-patent covenant:** https://github.com/FloatingPragma/observer-patch-holography/blob/main/PATENTS.md
@@ -262,11 +262,11 @@ Compiled list of Bernhard Mueller's published work. Grouped by project/theme, wi
 
 ---
 
-## Interactive Learning Platforms (floatingpragma.io)
+## Interactive Learning Platforms (floatingpragma.ai)
 
-- **STARK Lab** — Interactive STARK proof tutorial: https://floatingpragma.io/starklab/
-- **Awesome ZK Proofs** — Curated ZK learning path: https://floatingpragma.io/awesome-zk-proofs/
-- **Awesome AI Security** — AI security learning path: https://floatingpragma.io/awesome-ai-security/
+- **STARK Lab** — Interactive STARK proof tutorial: https://floatingpragma.ai/starklab/
+- **Awesome ZK Proofs** — Curated ZK learning path: https://floatingpragma.ai/awesome-zk-proofs/
+- **Awesome AI Security** — AI security learning path: https://floatingpragma.ai/awesome-ai-security/
 
 ---
 
